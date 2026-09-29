@@ -69,16 +69,10 @@ function route() {
     if (parts[2]) document.getElementById(parts[2])?.scrollIntoView({behavior:'smooth'});
   } else { currentId = null; indexPage(); window.scrollTo(0,0); }
 }
-document.addEventListener('click', event => {
-  const button = event.target.closest('[data-photo]');
-  if (button) { lightbox.querySelector('img').src = button.dataset.photo; lightbox.querySelector('img').alt = button.dataset.caption; lightbox.querySelector('p').textContent = button.dataset.caption; lightbox.showModal(); }
-});
-lightbox.querySelector('.close').addEventListener('click', () => lightbox.close());
-lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
 document.addEventListener('keydown', e => { if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName) && document.querySelector('#search')) { e.preventDefault(); document.querySelector('#search').focus(); } });
 window.addEventListener('hashchange', route);
 route();
-if (location.hostname === '127.0.0.1' && location.port === '8768') {
+if (location.hostname === '127.0.0.1' && location.port === '8769') {
   const editorLink = document.createElement('a');
   editorLink.href = '/editor';
   editorLink.textContent = '本地编辑 ↗';
