@@ -1,0 +1,330 @@
+{
+  "version": "3.6",
+  "taxa": [
+    {
+      "id": "cuiyuncao",
+      "name": "翠云草",
+      "scientificName": "Selaginella uncinata (Desv.) Spring",
+      "group": "石松类",
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "chinese": "植物界",
+          "scientific": "Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "chinese": "链型植物门",
+          "scientific": "Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "chinese": "木贼纲",
+          "scientific": "Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "chinese": "石松亚纲",
+          "scientific": "Lycopodiidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "chinese": "卷柏目",
+          "scientific": "Selaginellales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "chinese": "卷柏科",
+          "scientific": "Selaginellaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "chinese": "卷柏属",
+          "scientific": "Selaginella"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "chinese": "翠云草",
+          "scientific": "Selaginella uncinata"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP · 英国皇家植物园邱园",
+        "url": "https://powo.science.kew.org/taxon/60467456-2",
+        "record": "60467456-2",
+        "checked": "2026-09-30"
+      },
+      "translation": "中文名称为辅助对照；分类等级与科学名称按所链接原始记录整理。",
+      "note": "本记录的 Equisetopsida 采用广义范围；类群标签用于辅助查阅，不替代来源中的正式等级。",
+      "video": "https://www.bilibili.com/video/BV1qUbC68EJD/"
+    },
+    {
+      "id": "chahuacao",
+      "name": "叉花草",
+      "scientificName": "Strobilanthes hamiltoniana (Steud.) Bosser & Heine",
+      "group": "被子植物",
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "chinese": "植物界",
+          "scientific": "Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "chinese": "链型植物门",
+          "scientific": "Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "chinese": "木贼纲",
+          "scientific": "Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "chinese": "木兰亚纲",
+          "scientific": "Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "chinese": "唇形目",
+          "scientific": "Lamiales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "chinese": "爵床科",
+          "scientific": "Acanthaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "chinese": "马蓝属",
+          "scientific": "Strobilanthes"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "chinese": "叉花草",
+          "scientific": "Strobilanthes hamiltoniana"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP · 英国皇家植物园邱园",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:945722-1",
+        "record": "urn:lsid:ipni.org:names:945722-1",
+        "checked": "2026-09-30"
+      },
+      "translation": "中文名称为辅助对照；分类等级与科学名称按所链接原始记录整理。",
+      "note": "本记录的 Equisetopsida 采用广义范围；类群标签用于辅助查阅，不替代来源中的正式等级。",
+      "video": "https://www.bilibili.com/video/BV1Kkga6cEGv/"
+    },
+    {
+      "id": "muhe",
+      "name": "木荷",
+      "scientificName": "Schima superba Gardner & Champ.",
+      "group": "被子植物",
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "chinese": "植物界",
+          "scientific": "Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "chinese": "链型植物门",
+          "scientific": "Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "chinese": "木贼纲",
+          "scientific": "Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "chinese": "木兰亚纲",
+          "scientific": "Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "chinese": "杜鹃花目",
+          "scientific": "Ericales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "chinese": "山茶科",
+          "scientific": "Theaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "chinese": "木荷属",
+          "scientific": "Schima"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "chinese": "木荷",
+          "scientific": "Schima superba"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP · 英国皇家植物园邱园",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:829478-1",
+        "record": "urn:lsid:ipni.org:names:829478-1",
+        "checked": "2026-09-30"
+      },
+      "translation": "中文名称为辅助对照；分类等级与科学名称按所链接原始记录整理。",
+      "note": "本记录的 Equisetopsida 采用广义范围；类群标签用于辅助查阅，不替代来源中的正式等级。",
+      "video": "https://www.bilibili.com/video/BV1hGEE6QE8L/"
+    },
+    {
+      "id": "lujiaojue",
+      "name": "二歧鹿角蕨",
+      "scientificName": "Platycerium bifurcatum (Cav.) C.Chr.",
+      "group": "蕨类植物",
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "chinese": "植物界",
+          "scientific": "Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "chinese": "链型植物门",
+          "scientific": "Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "chinese": "木贼纲",
+          "scientific": "Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "chinese": "水龙骨亚纲",
+          "scientific": "Polypodiinae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "chinese": "水龙骨目",
+          "scientific": "Polypodiales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "chinese": "水龙骨科",
+          "scientific": "Polypodiaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "chinese": "鹿角蕨属",
+          "scientific": "Platycerium"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "chinese": "二歧鹿角蕨",
+          "scientific": "Platycerium bifurcatum"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP · 英国皇家植物园邱园",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:17177460-1",
+        "record": "urn:lsid:ipni.org:names:17177460-1",
+        "checked": "2026-09-30"
+      },
+      "translation": "中文名称为辅助对照；分类等级与科学名称按所链接原始记录整理。",
+      "note": "本记录的 Equisetopsida 采用广义范围；类群标签用于辅助查阅，不替代来源中的正式等级。 原站 Subclass 字段写作 Polypodiinae，此处保留原文；“水龙骨亚纲”为辅助译名。",
+      "video": "https://www.bilibili.com/video/BV1gdGw6oEss/"
+    },
+    {
+      "id": "maotouguishan",
+      "name": "毛头鬼伞",
+      "scientificName": "Coprinus comatus (O.F. Müll.) Pers.",
+      "group": "真菌",
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "chinese": "真菌界",
+          "scientific": "Fungi"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "chinese": "担子菌门",
+          "scientific": "Basidiomycota"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "chinese": "伞菌纲",
+          "scientific": "Agaricomycetes"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "chinese": "伞菌亚纲",
+          "scientific": "Agaricomycetidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "chinese": "蘑菇目",
+          "scientific": "Agaricales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "chinese": "蘑菇科",
+          "scientific": "Agaricaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "chinese": "鬼伞属",
+          "scientific": "Coprinus"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "chinese": "毛头鬼伞",
+          "scientific": "Coprinus comatus"
+        }
+      ],
+      "source": {
+        "provider": "Species Fungorum · 英国皇家植物园邱园",
+        "url": "https://www.speciesfungorum.org/names/NamesRecord.asp?RecordID=148667",
+        "record": "148667",
+        "checked": "2026-09-30"
+      },
+      "translation": "中文名称为辅助对照；分类等级与科学名称按所链接原始记录整理。",
+      "note": "分类位置按原站 Position in classification 整理为由界到种的顺序。毛头鬼伞属于真菌界。",
+      "video": "https://www.bilibili.com/video/BV1Wm7o6EE2m/"
+    }
+  ]
+}

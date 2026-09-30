@@ -1,0 +1,10 @@
+/* Version 3.6: source-based classification directory. */
+.topbar nav a{white-space:nowrap}.topbar .nav-index{border-bottom-color:transparent}.topbar nav a.current{border-bottom:3px solid var(--green)}
+.classification-intro{padding:44px 0 32px;border-bottom:1px solid var(--line)}.classification-intro h1{font-size:42px;font-weight:500;margin:12px 0 20px;font-family:SimSun,serif}
+.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:34px 0 40px;border-bottom:1px solid var(--line)}.method-grid h2,.classification-database h2{font:500 27px SimSun,serif;margin:0 0 20px}.method-grid p{font-size:15px;line-height:1.95;margin:0 0 16px}.method-grid a,.database-actions a{text-decoration:underline;text-underline-offset:4px}.method-reading{color:var(--muted)}
+.classification-database{padding:38px 0 60px}.classification-database>p{line-height:1.8}.classification-database .search{margin:24px 0 16px}.database-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;font-size:13px}.database-actions button{background:var(--paper);border:1px solid var(--line);padding:8px 12px;border-radius:4px;color:var(--green);cursor:pointer}.database-actions button:focus-visible{outline:2px solid var(--green);outline-offset:3px}.database-footnote{font-size:13px;color:var(--muted)}.tree-latin{font:14px Georgia,serif;color:var(--muted);margin-left:10px;overflow-wrap:anywhere}.detail-heading dl dd{flex-wrap:wrap;overflow-wrap:anywhere}
+@media(max-width:760px){.topbar{flex-wrap:wrap;gap:12px}.topbar nav{flex-wrap:wrap;gap:16px}.classification-intro h1{font-size:30px}.method-grid{grid-template-columns:1fr;gap:22px}.classification-intro{padding-top:28px}.tree-latin{display:block;margin:5px 0}.database-actions{gap:10px}.detail-heading dl{margin-top:24px}}
+
+@media(max-width:760px){.topbar nav .nav-index{display:block}}
+
+.classification-compact{padding:32px 0 8px;border-bottom:0}.classification-compact>p:not(.eyebrow){font-size:15px;line-height:1.9;margin:12px 0}.classification-compact a{text-decoration:underline;text-underline-offset:4px}.database-compact{padding-top:0}.database-compact>p{margin:10px 0}.database-compact .search{margin-top:18px}

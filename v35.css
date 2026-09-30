@@ -1,0 +1,23 @@
+/* Compact QR/video card, independent of the title row height. */
+.detail-heading{position:relative}
+.detail-heading .heading-top{display:block;padding-right:126px}
+.detail-heading .video-access{position:absolute;top:0;right:0;width:108px;border:0;border-radius:4px;overflow:hidden;background:white}
+.video-access .video-qr{width:100%;margin:0;border:1px solid var(--line);border-bottom:0;border-radius:4px 4px 0 0;overflow:hidden}
+.video-access .video-qr img{display:block;width:100%;border:0;border-radius:0}
+.video-access .video-link{box-sizing:border-box;width:100%;margin:0;padding:6px 2px;border-radius:0;font-size:11px;line-height:1.4;white-space:nowrap}
+.detail-heading .scientific{padding-right:126px;min-height:44px}
+@media(max-width:760px){.detail-heading .heading-top{padding-right:116px}.detail-heading .video-access{width:98px}.detail-heading .scientific{padding-right:116px;min-height:48px}.video-access .video-link{font-size:10px}}
+@media print{.detail-heading .video-access{width:90px}.detail-heading .heading-top,.detail-heading .scientific{padding-right:105px}}
+.class-group{display:inline-block;margin:0 0 12px;padding:5px 11px;border:1px solid var(--line);border-radius:3px;color:var(--green);font-size:12px;background:var(--paper)}
+.breadcrumb{line-height:1.9;overflow-wrap:anywhere}
+.taxonomy-table{border-collapse:collapse;width:100%;text-align:left;font-size:15px;table-layout:fixed}
+.taxonomy-table th,.taxonomy-table td{padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+.taxonomy-table thead{background:var(--paper);color:var(--muted)}
+.taxonomy-table th{font-weight:500}.taxonomy-table th:first-child{width:22%}.taxonomy-table th:nth-child(2){width:30%}
+.taxonomy-table small{display:block;font-size:12px;color:var(--muted);margin-top:3px}
+.taxonomy-table td[lang=la]{font-family:Georgia,serif}
+.taxonomy-citation{margin-top:22px;padding:18px 22px;border-left:3px solid #b9c9b2;background:var(--paper);overflow-wrap:anywhere}
+.taxonomy-citation p{font-size:13px!important;line-height:1.85!important;margin:0 0 8px!important}.taxonomy-citation p:last-child{margin-bottom:0!important}.taxonomy-citation a{text-decoration:underline;text-underline-offset:3px}
+.taxonomy-tree{padding:16px 0}.taxonomy-node{margin:7px 0}.taxonomy-node>summary{cursor:pointer;padding:8px 0;color:var(--green)}.taxonomy-node summary small{margin-left:12px;color:var(--muted);font-size:11px}.taxonomy-node>div{margin-left:16px;padding-left:13px;border-left:1px solid var(--line)}
+.taxonomy-leaf{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;font-size:14px}.taxonomy-leaf i{color:var(--muted);font:italic 12px Georgia,serif;overflow-wrap:anywhere}
+@media(max-width:760px){.detail-nav{flex-wrap:wrap;row-gap:12px}.taxonomy-table{font-size:13px}.taxonomy-table th,.taxonomy-table td{padding:11px 7px}.taxonomy-table th:first-child{width:25%}.taxonomy-table th:nth-child(2){width:29%}.taxonomy-table small{font-size:10px}.taxonomy-citation{padding:15px}.taxonomy-node>div{margin-left:5px;padding-left:7px}.taxonomy-node summary small{margin-left:7px}.class-group{margin-top:0}}
