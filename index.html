@@ -5,17 +5,24 @@
   <title>植物观察 · 一株植物的株</title>
   <meta name="description" content="一株植物的株的实拍植物档案：按分类探索植物与真菌，查看观察笔记、影像和手绘。">
   <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="v3.css"><link rel="stylesheet" href="v31.css">
-  <link rel="stylesheet" href="lightbox.css"><script src="data.js" defer></script><script src="app.js" defer></script><script src="lightbox.js" defer></script>
+  <link rel="stylesheet" href="v33.css"><link rel="stylesheet" href="v34.css"><link rel="stylesheet" href="lightbox.css"><script src="data.js" defer></script><script src="app.js" defer></script><script src="viewer-model.js" defer></script><script src="lightbox.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">跳到主要内容</a>
-  <header class="topbar"><a class="brand" href="#"><span class="brand-mark">株</span><span>一株植物的株<small>植物观察档案</small></span></a><nav aria-label="主导航"><a class="nav-index" href="#">物种索引</a><a href="https://space.bilibili.com/1712828715" target="_blank" rel="noopener noreferrer">Bilibili 主页 ↗</a></nav><span class="edition">FIELD NOTES / 3.2</span></header>
+  <header class="topbar"><a class="brand" href="#"><span class="brand-mark">株</span><span>一株植物的株<small>植物观察档案</small></span></a><nav aria-label="主导航"><a class="nav-index" href="#">物种索引</a><a href="https://space.bilibili.com/1712828715" target="_blank" rel="noopener noreferrer">Bilibili 主页 ↗</a></nav><span class="edition">FIELD NOTES / 3.4</span></header>
   <main id="main" tabindex="-1"></main>
   <footer><span>一株植物的株 · 从身边的一株开始观察</span><a href="license.html">版权与素材使用</a></footer>
   <dialog id="lightbox" aria-label="物种图片浏览" aria-describedby="viewer-caption">
-    <div class="viewer-header"><span id="viewer-title">图片浏览</span><button class="close" aria-label="关闭图片" title="关闭（Esc）">×</button></div>
-    <div class="viewer-stage"><img id="viewer-image" alt="" draggable="false"><p id="viewer-error" hidden>这张图片暂时无法加载，可继续浏览其它图片。</p></div>
-    <div class="viewer-footer"><button id="viewer-prev" aria-label="上一张图片" title="上一张（←）">←</button><div class="viewer-info" aria-live="polite" aria-atomic="true"><span id="viewer-count"></span><p id="viewer-caption"></p></div><button id="viewer-next" aria-label="下一张图片" title="下一张（→）">→</button></div>
+    <div class="viewer-stage" aria-label="图片区域：滚轮缩放，放大后可拖动"><img id="viewer-image" alt="" draggable="false"><p id="viewer-error" hidden>这张图片暂时无法加载，可继续浏览其它图片。</p></div>
+    <div class="viewer-header"><div class="viewer-heading"><span id="viewer-title">图片浏览</span><span id="viewer-count" aria-live="polite"></span></div><div class="viewer-tools">
+      <button id="viewer-fit" title="恢复完整看图（0）">适合屏幕</button><span id="viewer-zoom" aria-label="放大比例">100%</span>
+      <button id="viewer-rail-toggle" aria-label="显示或隐藏缩略图" aria-expanded="true" title="缩略图">▦</button>
+      <button id="viewer-fullscreen" aria-label="切换全屏" title="全屏">⛶</button><button class="close" aria-label="关闭图片" title="关闭（Esc）">×</button>
+    </div></div>
+    <button id="viewer-prev" class="viewer-arrow" aria-label="上一张图片" title="上一张（←）"><svg viewBox="0 0 24 40" aria-hidden="true"><path d="M20 3 4 20l16 17"/></svg></button>
+    <button id="viewer-next" class="viewer-arrow" aria-label="下一张图片" title="下一张（→）"><svg viewBox="0 0 24 40" aria-hidden="true"><path d="m4 3 16 17L4 37"/></svg></button>
+    <div class="viewer-caption-bar"><p id="viewer-caption" aria-live="polite"></p><span class="viewer-hint">滚轮缩放 · 放大后拖动 · 双击恢复 / 放大</span></div>
+    <aside class="viewer-rail" aria-label="当前物种的全部图片"><div class="rail-heading">这一篇的影像</div><div id="viewer-thumbnails"></div></aside>
   </dialog>
   <noscript>请启用 JavaScript 以浏览植物档案。</noscript>
 </body></html>
