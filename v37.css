@@ -16,3 +16,27 @@
 .pagination-buttons>span:first-child{position:static;flex-basis:auto}
 
 .taxonomy-tree mark{color:var(--green);padding:2px 4px;border-radius:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}.taxonomy-search-hit{background:#e8efb8}.taxonomy-filter-hit{background:#deebdc;box-shadow:inset 0 -2px #789a70}.taxonomy-leaf mark{font:inherit}.tree-latin mark{font:inherit}
+
+/* 手机导航：品牌独占首行，三个入口共用第二行，取消旧的满高链接。 */
+.intro-overview .stats{display:block;text-align:right}
+.intro-overview .stats>div{align-items:flex-end}
+.intro-overview .stats span{white-space:nowrap}
+@media(max-width:760px){
+  .intro-overview{align-items:flex-end}
+  .topbar{height:auto;min-height:0;flex-wrap:wrap;gap:8px;padding:12px 6% 0}
+  .topbar nav{flex:0 0 100%;height:auto;min-width:0;flex-wrap:nowrap;gap:12px;align-items:stretch;justify-content:flex-start;font-size:12px}
+  .topbar nav a,.topbar nav .nav-index{height:auto;display:flex;align-items:center;white-space:nowrap;padding:10px 0;border-bottom:3px solid transparent}
+  .topbar nav a.current{border-bottom-color:var(--green)}
+}
+
+/* 窄屏竖向浏览时，让物种数量与随机入口并排，减少首页留白。 */
+@media(max-width:760px) and (orientation:portrait){
+  .intro-overview{flex-direction:row;justify-content:space-between;align-items:center;gap:12px;margin-top:16px}
+  .intro-overview .stats{text-align:left;flex-shrink:0}
+  .intro-overview .stats>div{align-items:flex-start;gap:3px}
+  .intro-overview .stats strong{font-size:28px;line-height:1.1}
+  .intro-overview .stats span{font-size:11px;line-height:1.5}
+  .intro-overview>.random-species{align-self:center;font-size:12px;padding:9px 10px}
+  .intro-overview>.random-species span{margin-left:8px}
+  .intro{padding-bottom:22px}
+}
