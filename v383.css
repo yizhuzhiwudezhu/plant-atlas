@@ -1,0 +1,7 @@
+/* The atlas uses the site's navigation and its own graph layout. */
+body.atlas-page #main{max-width:1640px;margin:auto;padding:24px 4% 12px}
+.atlas-frame{display:block;width:100%;height:1300px;border:0;background:white}
+@media(max-width:760px){
+  .topbar nav{gap:clamp(7px,2.5vw,12px);font-size:11px}
+  body.atlas-page #main{padding:16px 3% 8px}
+}

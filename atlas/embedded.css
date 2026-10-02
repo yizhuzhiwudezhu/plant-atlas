@@ -1,0 +1,6 @@
+:root{background:white}
+body{overflow-y:hidden}
+main{max-width:none;padding:0 0 12px}
+.workspace{box-shadow:none}
+.original-video-titles ul{padding-left:20px;margin:6px 0}
+.original-video-titles li{font-size:12px;line-height:1.8;color:var(--muted)}

@@ -127,13 +127,26 @@ function classificationPage() {
   main.querySelector('form').addEventListener('submit',e=>e.preventDefault());input.addEventListener('input',renderDatabase);
   main.querySelector('#expand-taxonomy').addEventListener('click',()=>main.querySelectorAll('.taxonomy-node').forEach(n=>n.open=true));main.querySelector('#collapse-taxonomy').addEventListener('click',()=>main.querySelectorAll('.taxonomy-node').forEach(n=>n.open=false));renderDatabase();
 }
+function atlasPage() {
+  document.title = '图谱 · 一株植物的株';
+  main.innerHTML = '<iframe id="atlas-frame" class="atlas-frame" src="atlas/index.html" title="物种分类图谱与碰撞漫游" allow="fullscreen" allowfullscreen></iframe>';
+}
+window.addEventListener('message', event => {
+  const frame = document.getElementById('atlas-frame');
+  if (!frame || event.source !== frame.contentWindow || event.origin !== location.origin || event.data?.type !== 'atlas-height') return;
+  const height = Number(event.data.height);
+  if (Number.isFinite(height) && height >= 400 && height <= 12000) frame.style.height = Math.ceil(height) + 'px';
+});
 let currentId;
 function route() {
   rememberHomeTree();
   if (location.hash === '#main') { main.focus({preventScroll:true}); return; }
   const parts = location.hash.slice(1).split('/');
-  document.querySelector('.nav-index').classList.toggle('current',parts[0] !== 'classification');
+  document.querySelector('.nav-index').classList.toggle('current',!['classification','atlas'].includes(parts[0]));
   document.querySelector('.nav-classification').classList.toggle('current',parts[0] === 'classification');
+  document.querySelector('.nav-atlas').classList.toggle('current',parts[0] === 'atlas');
+  document.body.classList.toggle('atlas-page',parts[0] === 'atlas');
+  if (parts[0] === 'atlas') { currentId = null; atlasPage(); window.scrollTo(0,0); return; }
   if (parts[0] === 'classification') { currentId = null; classificationPage(); window.scrollTo(0,0); return; }
   if (parts[0] === 'plant') {
     let id; try { id = decodeURIComponent(parts[1] || ''); } catch { id = ''; }
@@ -144,7 +157,7 @@ function route() {
 document.addEventListener('keydown', e => { if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName) && document.querySelector('#search')) { e.preventDefault(); document.querySelector('#search').focus(); } });
 window.addEventListener('hashchange', route);
 route();
-if (location.hostname === '127.0.0.1' && location.port === '8774') {
+if (location.hostname === '127.0.0.1' && location.port === '8778') {
   const editorLink = document.createElement('a');
   editorLink.href = '/editor';
   editorLink.textContent = '本地编辑 ↗';
