@@ -1,0 +1,14 @@
+.scientific .cultivar-epithet,.latin .cultivar-epithet{font-style:normal}
+.detail-heading .companion-shortcut{font-size:13px;line-height:1.8;margin:10px 0 18px;color:var(--muted)}
+.companion-shortcut a{text-decoration:underline;text-underline-offset:4px}
+.cultivar-note{margin:20px 0;padding:16px 20px;background:var(--paper);border-left:2px solid var(--green);line-height:1.8}
+.cultivar-note p{margin:3px 0;font-size:14px}.cultivar-note .scientific{font-size:17px}
+.companion-section>p{max-width:850px;line-height:1.9}
+.companion-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;margin-top:24px}
+.companion-list article{min-width:0;border-top:1px solid var(--line);padding:20px 0}
+.companion-list h3{font-size:19px;font-weight:500;margin:0 0 8px}
+.companion-list p{margin:5px 0;line-height:1.8;font-size:14px;overflow-wrap:anywhere}
+.companion-scientific{font-family:Georgia,serif;font-style:italic}
+.companion-list .companion-status{font-size:12px;color:var(--muted)}
+.companion-list a{display:inline-block;margin-top:8px;font-size:13px;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:600px){.companion-list{grid-template-columns:1fr}.cultivar-note{padding:12px 14px}.detail-heading .companion-shortcut{margin-bottom:12px}}

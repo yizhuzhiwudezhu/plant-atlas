@@ -7,15 +7,14 @@
  const palettes={branch:['#66986e','#6593a2','#8aa06a','#7d879b','#aaa06c','#ad9561','#87a67e','#bd8966'],blue:['#397e91','#6a91ba','#5fa896','#817ba6','#547db1','#719ca3','#77a7b4','#c49472'],earth:['#8b965d','#b49a6b','#789279','#9c7c6e','#aa9752','#b27c4e','#808963','#bf8279'],contrast:['#0072b2','#009e73','#cc79a7','#e69f00','#8064a2','#b85120','#427638','#a84257'],quiet:['#6c9676','#6c9676','#6c9676','#6c9676','#6c9676','#6c9676','#6c9676','#bd8966']};
  for(const [key,color] of Object.entries({branch:'#8e79a8',blue:'#588691',contrast:'#985d8a',earth:'#91745c',quiet:'#6c9676'}))palettes[key].push(color);
  palettes.contrast2=['#c34b25','#167c59','#864b9c','#af8614','#237bad','#c0476a','#4d7d28','#6854a2','#258983','#95621f','#b03747','#597033'];
- const state={view:'game',layout:'default',depth:4,hiddenThrough:2,sort:'count',density:'comfortable',labels:'chinese',labelPolicy:'auto',lines:'curve',palette:'branch',query:'',kind:'all',scope:'life',selected:null,collapsed:new Set(),transform:d3.zoomIdentity};
+ const state={view:'sankey',layout:'default',depth:4,hiddenThrough:2,sort:'count',density:'comfortable',labels:'chinese',labelPolicy:'auto',lines:'curve',palette:'branch',query:'',kind:'all',scope:'life',selected:null,collapsed:new Set(),transform:d3.zoomIdentity};
  let taxa,map,root,orderColors,matched=new Set(),svg,layer,zoom,width,height,forceDrag=false,searchTimer,activeSimulation,labelFrame,treeFit;
  const forcePositions=new Map(),gameSeen=new Set(),gamePositions=new Map();
  let gamePaused=matchMedia('(prefers-reduced-motion: reduce)').matches,gameNodes=[],gameGroups,gamePool=[],gameChosenId=null,gameOpenedId=null,gameFrame=null,gameJump=null,gameBounds;
  const gamePointer={x:0,y:0,active:false,radius:220*2/3,strength:48};
  const gamePhysics=AtlasExtras.gamePhysics;
  try{
-  const responses=await Promise.all([fetch('taxonomy.json'),fetch('graph-data.json')]);if(responses.some(r=>!r.ok))throw Error('无法读取分类数据');
-  const [data,graph]=await Promise.all(responses.map(r=>r.json()));taxa=data.taxa;$('#kind option[value="all"]').textContent=`全部${taxa.length}条记录`;$('#reference-count').textContent=taxa.filter(t=>t.recordKind==='reference').length+'条';map=new Map(graph.nodes.map(n=>[n.id,{...n,children:[]}])) ;
+  const data=window.LIBRARY,graph=data.graph;if(!data?.taxa||!graph)throw Error('无法读取统一档案数据');taxa=data.taxa;$('#reference-count').textContent=taxa.filter(t=>t.recordKind==='material-prepared').length+'条';map=new Map(graph.nodes.map(n=>[n.id,{...n,children:[]}])) ;
   root={id:'life',chinese:'收录物种',scientific:'Recorded species',rank:'root',depth:-1,count:taxa.length,speciesIds:taxa.map(t=>t.id),parent:null,children:[]};map.set(root.id,root);
   for(const n of graph.nodes){const item=map.get(n.id);if(n.parent)map.get(n.parent).children.push(item);else{item.parent=root.id;root.children.push(item);}}
   orderColors=new Map([...map.values()].filter(n=>n.rank==='order').sort((a,b)=>a.scientific.localeCompare(b.scientific,'en')).map((n,i)=>[n.scientific,i]));
@@ -24,8 +23,8 @@
   svg.call(zoom).on('dblclick.zoom',null).attr('tabindex',0).on('keydown.pan',event=>{const direction={ArrowLeft:[1,0],ArrowRight:[-1,0],ArrowUp:[0,1],ArrowDown:[0,-1]}[event.key];if(direction&&event.target===svg.node()){event.preventDefault();if(state.view!=='game')svg.call(zoom.translateBy,direction[0]*width/5/state.transform.k,direction[1]*height/5/state.transform.k);}});
   bindControls();updateSearch();render(true);$('#loading').hidden=true;
   let resizeTimer;new ResizeObserver(()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>render(true),120);}).observe($('#stage'));
-  document.addEventListener('visibilitychange',()=>{if(state.view!=='game')return;if(document.hidden)activeSimulation?.stop();else if(!gamePaused)activeSimulation?.alpha(.3).alphaTarget(.3).restart();});
- }catch(error){$('#loading').textContent='加载失败：'+error.message+'。请通过“打开3.8.3版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
+  document.addEventListener('visibilitychange',()=>{if(state.view!=='game')return;if(document.hidden){gamePointer.active=false;activeSimulation?.stop();}else if(!gamePaused)activeSimulation?.alpha(.3).alphaTarget(.3).restart();});
+ }catch(error){$('#loading').textContent='加载失败：'+error.message+'。请通过“打开3.9.3版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
 
  function nodeLabel(n){return state.labels==='scientific'?n.scientific:(n.chinese||n.scientific);}
  function lineage(n){const path=[];while(n){path.unshift(n);n=n.parent?map.get(n.parent):null;}return path;}
@@ -43,12 +42,13 @@
   return tree;
  }
  function updateSearch(){
+  const a=map.get(state.selected),j=$('#open-archive');j.hidden=!(a?.rank==='species');if(!j.hidden)j.href='../#plant/'+encodeURIComponent(a.speciesIds[0]);
   const terms=state.query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
   matched=new Set(taxa.filter(t=>(state.kind==='all'||t.recordKind===state.kind)&&terms.every(term=>[t.name,t.scientificName,t.group,...(t.aliases||[]),...t.ranks.flatMap(r=>[r.chinese,r.scientific])].join(' ').toLocaleLowerCase().includes(term))).map(t=>t.id));
   $('#result-count').textContent=`匹配 ${matched.size} 种 / 全库 ${taxa.length} 种`;
   $('#focus-matches').disabled=!(state.query||state.kind!=='all')||matched.size===0;
   $('#empty').hidden=matched.size>0;
-  $('#species-list').innerHTML=taxa.filter(t=>matched.has(t.id)).map(t=>`<button data-species="${escape(t.id)}" class="${state.selected===speciesNode(t.id)?.id?'selected':''}"><span>${escape(t.name)} <span class="badge">${t.recordKind==='observation'?'观察':'参考'}</span></span><small>${escape(t.scientificName)}</small></button>`).join('')||'<p class="small-note">没有匹配的物种。</p>';
+  $('#species-list').innerHTML=taxa.filter(t=>matched.has(t.id)).sort((a,b)=>a.name.localeCompare(b.name,'zh-Hans-CN-u-co-pinyin',{numeric:true})||a.id.localeCompare(b.id)).map(t=>`<button data-species="${escape(t.id)}" class="${state.selected===speciesNode(t.id)?.id?'selected':''}"><span>${escape(t.name)}</span><small>${escape(t.scientificName)}</small></button>`).join('')||'<p class="small-note">没有匹配的物种。</p>';
   $('#species-list').querySelectorAll('button').forEach(b=>b.onclick=()=>{const n=speciesNode(b.dataset.species);if(!isInsideScope(n))state.scope='life';state.depth=7;$('#depth').value='7';for(const p of lineage(n))state.collapsed.delete(p.id);selectNode(n);render(true);});
  }
  function speciesNode(id){return [...map.values()].find(n=>n.rank==='species'&&n.speciesIds.includes(id));}
@@ -56,11 +56,12 @@
  function selectNode(n){state.selected=n.id;if(state.view==='game'&&n.rank==='species')gameOpenedId=n.speciesIds[0];updateSelection();refreshHighlight();updateSearch();if(state.view==='game')updateGame();}
  function refreshHighlight(){layer.selectAll('.graph-node').attr('class',d=>className(d.data||d));layer.selectAll('.graph-link').attr('class',d=>linkClass(d.target.data||d.target));scheduleLabels();}
  function updateSelection(){
+  const chosen=map.get(state.selected);const archive=chosen?.rank==='species'?taxa.find(t=>t.id===chosen.speciesIds[0]):null;const jump=$('#open-archive');jump.hidden=!archive;if(archive)jump.href='../#plant/'+encodeURIComponent(archive.id);else jump.removeAttribute('href');
   const n=map.get(state.selected);if(!n){$('#focus').disabled=true;$('#toggle-branch').hidden=true;$('#selection-copy').innerHTML='<p class="eyebrow">'+(state.query||state.kind!=='all'?'当前匹配 '+matched.size+' 个物种':'选择一个节点')+'</p><h3>从一个名字，走进它的分支。</h3><p>点击图中节点或左侧物种，查看中英文分类、数量与来源。</p>';return;}
   const species=n.rank==='species'?taxa.find(t=>t.id===n.speciesIds[0]):null;
   if(state.view==='game'&&species?.id===gameChosenId&&gameOpenedId!==species.id){$('#focus').disabled=true;$('#toggle-branch').hidden=true;$('#selection-copy').innerHTML='<p class="eyebrow">随机认识一个物种</p><h3>找到那颗换了颜色的物种球。</h3><p>它跃出后会停在原地，点击它查看物种档案。其它球会给鼠标让路。</p>';return;}
   const matchCount=n.speciesIds.filter(id=>matched.has(id)).length;
-  $('#selection-copy').innerHTML=`<p class="eyebrow">${escape(rankLabels[n.depth]||'全库')} / ${species?(species.recordKind==='observation'?'原有观察档案':'图谱测试参考记录'):'分类节点'}</p><h3>${escape(n.chinese)}</h3><p class="scientific">${escape(species?.scientificName||n.scientific)}</p><p>收录 ${n.count} 种${state.query||state.kind!=='all'?` · 当前搜索匹配 ${matchCount} 种`:''}。${species&&species.recordKind==='reference'?'仅有分类记录，尚无观察文稿、视频或影像。':''}</p><div class="taxonomy-path">${lineage(n).filter(p=>p.depth>=0).map(p=>`<span>${rankLabels[p.depth]} · ${escape(p.chinese)} <i>${escape(p.scientific)}</i></span>`).join('')}</div>${species?.recordKind==='observation'?`<p><a href="../#plant/${encodeURIComponent(species.id)}" target="_parent">查看观察档案 ↗</a></p>`:''}${species?.originalVideoTitles?.length?`<div class="original-video-titles"><p>原视频标题</p><ul>${species.originalVideoTitles.map(title=>`<li>${escape(title)}</li>`).join('')}</ul></div>`:''}${species?`<p>分类来源：<a href="${escape(species.source.url)}" target="_blank" rel="noopener noreferrer">${escape(species.source.provider)} ↗</a> · 核对 ${escape(species.source.checked)}</p>${species.chineseNameSources?.length?`<p>中文属名${species.chineseNameSources[0].status==='verified'?'参考':'待核对'}：<a href="${escape(species.chineseNameSources[0].url)}" target="_blank" rel="noopener noreferrer">植物智（iPlant） ↗</a>；科学分类仍采用 POWO / WCVP。</p>`:''}${species.evidence?.higherClassificationURL?`<p>上级分类：<a href="${escape(species.evidence.higherClassificationURL)}" target="_blank" rel="noopener noreferrer">POWO记录 ↗</a> · WCVP快照 ${escape(species.evidence.datasetRelease?.replace(' (official directory last-modified)',''))}</p>`:''}`:'<p>点击末端物种，可查看它对应的分类记录来源。中文名称为辅助对照。</p>'}`;
+  $('#selection-copy').innerHTML=`<p class="eyebrow">${escape(rankLabels[n.depth]||'全库')} / ${species?(species.recordKind==='observation'?'原有观察档案':'新增素材档案'):'分类节点'}</p><h3>${escape(n.chinese)}</h3><p class="scientific">${escape(species?.scientificName||n.scientific)}</p><p>收录 ${n.count} 个档案${state.query||state.kind!=='all'?` · 当前搜索匹配 ${matchCount} 种`:''}。${species&&species.recordKind==='reference'?'仅有分类记录，尚无观察文稿、视频或影像。':''}</p><div class="taxonomy-path">${lineage(n).filter(p=>p.depth>=0).map(p=>`<span>${rankLabels[p.depth]} · ${escape(p.chinese)} <i>${escape(p.scientific)}</i></span>`).join('')}</div>${species?`<p><a href="../#plant/${encodeURIComponent(species.id)}" target="_blank" rel="noopener noreferrer">查看观察档案 ↗</a></p>`:''}${species?.originalVideoTitles?.length?`<div class="original-video-titles"><p>原视频标题</p><ul>${species.originalVideoTitles.map(title=>`<li>${escape(title)}</li>`).join('')}</ul></div>`:''}${species?`<p>分类来源：<a href="${escape(species.source.url)}" target="_blank" rel="noopener noreferrer">${escape(species.source.provider)} ↗</a> · 核对 ${escape(species.source.checked)}</p>${species.chineseNameSources?.length?`<p>中文属名${species.chineseNameSources[0].status==='verified'?'参考':'待核对'}：<a href="${escape(species.chineseNameSources[0].url)}" target="_blank" rel="noopener noreferrer">植物智（iPlant） ↗</a>；科学分类仍采用 POWO / WCVP。</p>`:''}${species.evidence?.higherClassificationURL?`<p>上级分类：<a href="${escape(species.evidence.higherClassificationURL)}" target="_blank" rel="noopener noreferrer">POWO记录 ↗</a> · WCVP快照 ${escape(species.evidence.datasetRelease?.replace(' (official directory last-modified)',''))}</p>`:''}`:'<p>点击末端物种，可查看它对应的分类记录来源。中文名称为辅助对照。</p>'}`;
   $('#focus').disabled=n.id===state.scope;$('#toggle-branch').hidden=!['tree','radial'].includes(state.view)||!n.children.length;
   $('#toggle-branch').textContent=state.collapsed.has(n.id)||state.depth<=n.depth?'展开下一层':'收起此分支';
  }
@@ -70,7 +71,7 @@
    .on('click',(event,d)=>{event.stopPropagation();selectNode(d.data||d);})
    .on('dblclick',(event,d)=>{event.stopPropagation();enterScope(d.data||d);})
    .on('keydown',(event,d)=>{if(event.key==='Enter'){event.preventDefault();selectNode(d.data||d);}if(event.key===' '){event.preventDefault();enterScope(d.data||d);}})
-   .on('pointermove',(event,d)=>{const n=d.data||d;if(state.view==='game'&&!gameSeen.has(n.speciesIds[0]))return;const bounds=$('#stage').getBoundingClientRect();$('#tooltip').hidden=false;$('#tooltip').textContent=`${n.chinese}\n${n.scientific}\n${rankLabels[n.depth]||'全库'} · 收录 ${n.count} 种${filtering()?` · 匹配 ${n.speciesIds.filter(id=>matched.has(id)).length} 种`:''}`;$('#tooltip').style.left=Math.max(8,Math.min(bounds.width-225,event.clientX-bounds.left+14))+'px';$('#tooltip').style.top=Math.max(8,Math.min(bounds.height-110,event.clientY-bounds.top+14))+'px';})
+   .on('pointermove',(event,d)=>{const n=d.data||d;if(state.view==='game'&&!gameSeen.has(n.speciesIds[0]))return;const bounds=$('#stage').getBoundingClientRect();$('#tooltip').hidden=false;$('#tooltip').textContent=`${n.chinese}\n${n.scientific}\n${rankLabels[n.depth]||'全库'} · 收录 ${n.count} 个档案${filtering()?` · 匹配 ${n.speciesIds.filter(id=>matched.has(id)).length} 种`:''}`;$('#tooltip').style.left=Math.max(8,Math.min(bounds.width-225,event.clientX-bounds.left+14))+'px';$('#tooltip').style.top=Math.max(8,Math.min(bounds.height-110,event.clientY-bounds.top+14))+'px';})
    .on('pointerleave',()=>{$('#tooltip').hidden=true;});
  }
  function render(resetFit=false){
@@ -234,16 +235,37 @@
   else{gameChosenId=null;gameOpenedId=null;}
   for(const n of gameNodes){const mx=Math.max(0,W/2-n.r-10),my=Math.max(0,H/2-n.r-10);n.x=Math.max(-mx,Math.min(mx,n.x));n.y=Math.max(-my,Math.min(my,n.y));if(n.active){n.fx=n.x;n.fy=n.y;}}
   gameGroups=layer.append('g').selectAll('g').data(gameNodes).join('g');bindNode(gameGroups);
-  function openPlant(event,n){event.stopPropagation();if(n.active&&n.phase==='waiting'){selectNode(map.get(n.id));$('.selection').scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}}
+  let touchId=null,touchStart=null,touchMoved=false,suppressTouchClickUntil=0;
+  function openPlant(event,n){event.stopPropagation();if(event.type==='click'&&performance.now()<suppressTouchClickUntil)return;if(n.active&&n.phase==='waiting'){selectNode(map.get(n.id));window.open('../#plant/'+encodeURIComponent(n.speciesIds[0]),'_blank','noopener,noreferrer');}}
   gameGroups.on('dblclick',event=>event.stopPropagation()).on('click',openPlant).on('keydown',(event,n)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();openPlant(event,n);}}).on('pointermove',null);
   gameGroups.append('circle').attr('r',n=>n.r).attr('fill',nodeColor).attr('fill-opacity',.94).attr('stroke','white').attr('stroke-width',1).attr('vector-effect','non-scaling-stroke');circleText(gameGroups,false);
   const simulation=d3.forceSimulation(gameNodes).force('pointer',AtlasExtras.pointerRepulsion(gamePointer)).force('elastic',AtlasExtras.elasticCollision(gamePhysics.restitution)).force('collide',d3.forceCollide(n=>n.r+1.5).strength(1).iterations(3)).force('x',d3.forceX(0).strength(gamePhysics.center)).force('y',d3.forceY(0).strength(gamePhysics.center)).force('return',AtlasExtras.softReturn(W/2,H/2,gamePhysics.maxSpeed)).velocityDecay(gamePhysics.damping).stop();activeSimulation=simulation;
   simulation.on('tick',positionGame);positionGame();
-  // The pointer is a force field, not a draggable or selectable plant.
-  svg.on('pointermove.plant-game',event=>{
-   if(gamePaused||event.pointerType==='touch')return;
+  // Touch uses the same force field as a mouse, only while a finger is down.
+  function moveGamePointer(event){
+   if(gamePaused)return;
    const point=state.transform.invert(d3.pointer(event,svg.node()));gamePointer.x=point[0];gamePointer.y=point[1];gamePointer.radius=gamePhysics.pointerRadius/state.transform.k;gamePointer.strength=gamePhysics.pointerStrength/state.transform.k;gamePointer.active=true;simulation.alpha(Math.max(.4,simulation.alpha())).alphaTarget(gamePhysics.hoverAlpha).restart();
-  }).on('pointerleave.plant-game pointercancel.plant-game',()=>{gamePointer.active=false;if(!gamePaused)simulation.alphaTarget(.3);});
+  }
+  function stopGamePointer(event){
+   if(event?.pointerType==='touch'&&event.pointerId!==touchId)return;
+   if(touchId!==null&&touchMoved)suppressTouchClickUntil=performance.now()+500;
+   touchId=null;touchStart=null;gamePointer.active=false;if(!gamePaused)simulation.alphaTarget(.3);
+  }
+  svg.on('pointerdown.plant-game',event=>{
+   if(event.pointerType!=='touch')return;
+   if(touchId!==null)return;
+   touchId=event.pointerId;touchStart=[event.clientX,event.clientY];touchMoved=false;suppressTouchClickUntil=0;
+   // Keep the original target so tapping the selected ball still generates its click.
+   event.target.setPointerCapture?.(event.pointerId);
+   moveGamePointer(event);
+  }).on('pointermove.plant-game',event=>{
+   if(event.pointerType==='touch'){
+    if(event.pointerId!==touchId)return;
+    if(Math.hypot(event.clientX-touchStart[0],event.clientY-touchStart[1])>8)touchMoved=true;
+   }
+   moveGamePointer(event);
+  }).on('pointerup.plant-game',event=>{if(event.pointerType==='touch')stopGamePointer(event);})
+   .on('pointerleave.plant-game pointercancel.plant-game lostpointercapture.plant-game',stopGamePointer);
   if(!gamePaused)simulation.alpha(.3).alphaTarget(.3).restart();updateGame();
  }
  function drawForce(h){
@@ -304,16 +326,17 @@
   $('#palette-buttons').querySelectorAll('button').forEach(button=>button.onclick=()=>{state.palette=button.dataset.palette;render(false);});
   setLayoutOptions();$('.view-tabs').querySelectorAll('button[data-view]').forEach(b=>b.onclick=()=>{state.view=b.dataset.view;$('.view-tabs').querySelectorAll('button[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));setLayoutOptions();render(true);});
   $('#search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{const oldDepth=state.depth,oldScope=state.scope;state.query=$('#search').value.trim();state.scope='life';state.selected=null;if(state.query){let deepest=0;for(const t of taxa)for(let i=0;i<t.ranks.length;i++)if(state.query.toLowerCase().split(/\s+/).some(term=>[t.ranks[i].chinese,t.ranks[i].scientific].some(s=>s.toLowerCase().includes(term))))deepest=Math.max(deepest,i);state.depth=Math.max(4,deepest,state.hiddenThrough+1);$('#depth').value=String(state.depth);state.collapsed.clear();}updateSearch();render(state.depth!==oldDepth||state.scope!==oldScope);},160);};
-  $('#kind').onchange=()=>{state.kind=$('#kind').value;state.selected=null;state.scope='life';updateSearch();render(true);};
+  
   for(const key of ['layout','depth','hiddenThrough','sort','labels','labelPolicy','lines'])$('#'+key).onchange=()=>{state[key]=['depth','hiddenThrough'].includes(key)?Number($('#'+key).value):$('#'+key).value;if(key==='hiddenThrough'&&state.hiddenThrough>=state.depth){state.depth=state.hiddenThrough+1;$('#depth').value=String(state.depth);}if(key==='depth'&&state.depth<=state.hiddenThrough){state.hiddenThrough=state.depth-1;$('#hiddenThrough').value=String(state.hiddenThrough);}if(key==='depth'||key==='hiddenThrough')state.collapsed.clear();render(true);};
+  if(matchMedia('(max-width:700px)').matches){$('#settings').hidden=true;$('#settings-toggle').setAttribute('aria-expanded','false');$('#settings-toggle').textContent='显示设置 ⌄';}
   $('#settings-toggle').onclick=()=>{const open=$('#settings').hidden;$('#settings').hidden=!open;$('#settings-toggle').setAttribute('aria-expanded',String(open));$('#settings-toggle').textContent=open?'显示设置 ⌃':'显示设置 ⌄';};
   $('#zoom-in').onclick=()=>svg.call(zoom.scaleBy,1.25);$('#zoom-out').onclick=()=>svg.call(zoom.scaleBy,.8);$('#fit').onclick=fit;
   $('#game-random').onclick=event=>{const plant=AtlasExtras.nextPlant(gamePool,gameSeen);if(plant)beginGameJump(plant.id,event);};
   $('#game-restart').onclick=()=>{gameSeen.clear();state.selected=null;gameChosenId=gameOpenedId=null;gamePositions.clear();updateSearch();render(true);};
-  $('#reset').onclick=()=>{gameChosenId=gameOpenedId=null;state.scope='life';state.selected=null;state.collapsed.clear();state.query='';state.kind='all';state.depth=4;state.hiddenThrough=2;$('#hiddenThrough').value='2';$('#search').value='';$('#kind').value='all';$('#depth').value='4';$('#selection-copy').innerHTML='<p class="eyebrow">回到全库</p><h3>'+taxa.length+'个名字，一张共同的地图。</h3><p>点击节点查看分类路径，或查找一个感兴趣的物种。</p>';$('#focus').disabled=true;$('#toggle-branch').hidden=true;updateSearch();render(true);};
+  $('#reset').onclick=()=>{gameChosenId=gameOpenedId=null;state.scope='life';state.selected=null;state.collapsed.clear();state.query='';state.kind='all';state.depth=4;state.hiddenThrough=2;$('#hiddenThrough').value='2';$('#search').value='';$('#depth').value='4';$('#selection-copy').innerHTML='<p class="eyebrow">回到全库</p><h3>'+taxa.length+'个名字，一张共同的地图。</h3><p>点击节点查看分类路径，或查找一个感兴趣的物种。</p>';$('#focus').disabled=true;$('#toggle-branch').hidden=true;updateSearch();render(true);};
   $('#expand-all').onclick=()=>{state.scope='life';state.depth=7;state.hiddenThrough=-1;state.collapsed.clear();$('#depth').value='7';$('#hiddenThrough').value='-1';render(true);};
   $('#focus').onclick=()=>{if(state.selected)enterScope(map.get(state.selected));};
-  $('#clear-selection').onclick=()=>{gameChosenId=gameOpenedId=null;state.selected=null;state.scope='life';$('#selection-copy').innerHTML='<p class="eyebrow">取消选中</p><h3>回到当前搜索结果。</h3><p>搜索条件保留，点击节点继续查看。</p>';$('#toggle-branch').hidden=true;updateSearch();render(true);};
+  $('#clear-selection').onclick=()=>{gameChosenId=gameOpenedId=null;state.selected=null;state.scope='life';$('#open-archive').hidden=true;$('#selection-copy').innerHTML='<p class="eyebrow">取消选中</p><h3>回到当前搜索结果。</h3><p>搜索条件保留，点击节点继续查看。</p>';$('#toggle-branch').hidden=true;updateSearch();render(true);};
   $('#focus-matches').onclick=()=>{const paths=[...matched].map(id=>lineage(speciesNode(id)));let common=root;for(let i=0;i<paths[0].length;i++){const candidate=paths[0][i];if(paths.every(path=>path[i]?.id===candidate.id))common=candidate;else break;}enterScope(common);};
   $('#toggle-branch').onclick=()=>{const n=map.get(state.selected);if(!n)return;if(state.depth<=n.depth){state.depth=Math.min(7,n.depth+1);$('#depth').value=String(state.depth);state.collapsed.delete(n.id);}else if(state.collapsed.has(n.id))state.collapsed.delete(n.id);else state.collapsed.add(n.id);render(true);};
   $('#fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('.visual-panel').requestFullscreen();}catch{$('#context-note').textContent='当前浏览器未允许全屏；仍可使用缩放和拖动查看图谱。';}};document.addEventListener('fullscreenchange',()=>{$('#fullscreen').textContent=document.fullscreenElement?'退出全屏':'全屏';render(true);});
