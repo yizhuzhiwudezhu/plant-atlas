@@ -12,7 +12,7 @@ const lightbox = document.querySelector('#lightbox');
 
 function scientificLabel(p){
   const name=String(p.scientificName||'');
-  const at=p.rank==='cultivar'?name.indexOf("'"):-1;
+  const at=['cultivar','horticultural-hybrid'].includes(p.rank)?name.indexOf("'"):-1;
   return at<0?esc(name):`${esc(name.slice(0,at))}<span class="cultivar-epithet">${esc(name.slice(at))}</span>`;
 }
 function companionSection(p){
@@ -53,7 +53,7 @@ function taxonomyCitation(p) {
 }
 
 function taxonomySection(p) {
-  return `<section id="taxonomy" class="detail-section"><p class="eyebrow">CLASSIFICATION / 分类</p><h2>它在${p.group==='绿藻'?'绿藻':p.kingdom==='真菌界'?'真菌':'植物'}世界中的位置</h2><div class="taxonomy-table-wrap"><table class="taxonomy-table"><thead><tr><th scope="col">等级</th><th scope="col">中文名称 / 辅助对照</th><th scope="col">来源科学名称</th></tr></thead><tbody>${taxonomyRows(p,true).map(r=>`<tr><th scope="row">${esc(r[0])}<small>${r[1]}</small></th><td>${esc(r[2]||(r[3]?'—':r[4]))}</td><td lang="la">${esc(r[3]||'—')}</td></tr>`).join('')}</tbody></table></div>${p.rank==='cultivar'?`<div class="cultivar-note"><p>园艺品种 · 本期主对象</p><p class="scientific">${scientificLabel(p)}</p><p>上表保留来源中的正式分类等级，园艺品种名另列。</p></div>`:''}</section>`;
+  return `<section id="taxonomy" class="detail-section"><p class="eyebrow">CLASSIFICATION / 分类</p><h2>它在${p.group==='绿藻'?'绿藻':p.kingdom==='真菌界'?'真菌':'植物'}世界中的位置</h2><div class="taxonomy-table-wrap"><table class="taxonomy-table"><thead><tr><th scope="col">等级</th><th scope="col">中文名称 / 辅助对照</th><th scope="col">来源科学名称</th></tr></thead><tbody>${taxonomyRows(p,true).map(r=>`<tr><th scope="row">${esc(r[0])}<small>${r[1]}</small></th><td>${esc(r[2]||(r[3]?'—':r[4]))}</td><td lang="la">${esc(r[3]||'—')}</td></tr>`).join('')}</tbody></table></div>${['cultivar','horticultural-hybrid'].includes(p.rank)?`<div class="cultivar-note"><p>园艺品种 · 本期主对象</p><p class="scientific">${scientificLabel(p)}</p><p>上表保留来源中的正式分类等级，园艺品种名另列。</p></div>`:''}</section>`;
 }
 
 function photoButton(src, alt, cls = '') {
@@ -136,14 +136,14 @@ function detailPage(id) {
   const photos = (p.photos || []).filter(photo => { if (!photo.image || used.has(photo.image)) return false; used.add(photo.image); return true; });
   const paragraphs = text => String(text || '').split(/\n+/).filter(Boolean).map(t=>`<p>${esc(t)}</p>`).join('');
   document.title = `${p.name} · 一株植物的株`;
-  main.innerHTML = `<div class="detail"><a class="back" href="#">← 返回首页</a><p class="breadcrumb">${taxonomyRows(p).map(r=>esc(r[2]||r[3])).concat(p.rank==='cultivar'?[esc(p.name)+'（园艺品种）']:[]).join(' › ')}</p>
-  <section class="detail-hero"><div class="detail-cover">${p.cover?photoButton(p.cover,p.coverCaption||`${p.name} · 实拍影像`):''}</div><div class="detail-heading"><div class="heading-top"><div><p class="eyebrow">物种观察档案 · ${esc(p.archiveId||p.id)}</p><h1>${esc(p.name)}</h1></div>${p.video?`<div class="video-access"><a class="video-qr" href="${esc(p.video)}" target="_blank" rel="noopener noreferrer"><img src="assets/${esc(p.id)}/video-qr.png" alt="${esc(p.name)}视频二维码"></a><a class="video-link" href="${esc(p.video)}" target="_blank" rel="noopener noreferrer">▷ 看这期视频 ↗</a></div>`:''}</div><p class="scientific">${scientificLabel(p)}</p><p class="class-group">类群 · ${esc(p.group)}${p.rank==='cultivar'?' · 园艺品种':''}</p><p class="detail-summary">${esc(p.summary)}</p>${p.relatedPlants?.length?`<p class="companion-shortcut">本期另有 ${p.relatedPlants.length} 个同片对象 · <a href="#plant/${p.id}/companions">查看同片记录 ↗</a></p>`:''}<dl>${[['目',p.orderName,p.orderLatin],['科',p.family,p.familyLatin],['属',p.genus,p.genusLatin]].filter(([,cn,latin])=>cn||latin).map(([rank,cn,latin])=>`<div><dt>${rank}</dt><dd><span>${esc(cn)}</span>${latin?`<span class="taxon-latin">${esc(latin)}</span>`:''}</dd></div>`).join('')}${aliases.length?`<div><dt>常用名 / 别名</dt><dd>${aliases.map(esc).join('、')}</dd></div>`:''}</dl></div></section>
+  main.innerHTML = `<div class="detail"><a class="back" href="#">← 返回首页</a><p class="breadcrumb">${taxonomyRows(p).map(r=>esc(r[2]||r[3])).concat(['cultivar','horticultural-hybrid'].includes(p.rank)?[esc(p.name)+'（园艺品种）']:[]).join(' › ')}</p>
+  <section class="detail-hero"><div class="detail-cover">${p.cover?photoButton(p.cover,p.coverCaption||`${p.name} · 实拍影像`):''}</div><div class="detail-heading"><div class="heading-top"><div><p class="eyebrow">物种观察档案 · ${esc(p.archiveId||p.id)}</p><h1>${esc(p.name)}</h1></div>${p.video?`<div class="video-access"><a class="video-qr" data-video-archive="${esc(p.id)}" data-video-position="二维码链接" href="${esc(p.video)}" target="_blank" rel="noopener noreferrer"><img src="assets/${esc(p.id)}/video-qr.png" alt="${esc(p.name)}视频二维码"></a><a class="video-link" data-video-archive="${esc(p.id)}" data-video-position="页头按钮" href="${esc(p.video)}" target="_blank" rel="noopener noreferrer">▷ 看这期视频 ↗</a></div>`:''}</div><p class="scientific">${scientificLabel(p)}</p><p class="class-group">类群 · ${esc(p.group)}${['cultivar','horticultural-hybrid'].includes(p.rank)?' · 园艺品种':''}</p><p class="detail-summary">${esc(p.summary)}</p>${p.relatedPlants?.length?`<p class="companion-shortcut">本期另有 ${p.relatedPlants.length} 个同片对象 · <a href="#plant/${p.id}/companions">查看同片记录 ↗</a></p>`:''}<dl>${[['目',p.orderName,p.orderLatin],['科',p.family,p.familyLatin],['属',p.genus,p.genusLatin]].filter(([,cn,latin])=>cn||latin).map(([rank,cn,latin])=>`<div><dt>${rank}</dt><dd><span>${esc(cn)}</span>${latin?`<span class="taxon-latin">${esc(latin)}</span>`:''}</dd></div>`).join('')}${aliases.length?`<div><dt>常用名 / 别名</dt><dd>${aliases.map(esc).join('、')}</dd></div>`:''}</dl></div></section>
   <nav class="detail-nav" aria-label="档案章节"><a href="#plant/${p.id}/notes">观察笔记 <small>${p.chapters.length}</small></a>${photos.length?`<a href="#plant/${p.id}/photos">实拍影像 <small>${photos.length}</small></a>`:''}${p.drawings.length?`<a href="#plant/${p.id}/drawings">自然手绘 <small>${p.drawings.length}</small></a>`:''}<a href="#plant/${p.id}/taxonomy">分类</a><a href="#plant/${p.id}/sources">资料来源</a></nav>
   <div class="detail-columns"><div><section id="notes" class="detail-section"><p class="eyebrow">FIELD NOTES / 观察笔记</p><h2>一起认识它</h2>${p.contentStatus==='preparing'?'<p class="preparing-notes">观察笔记正在整理。</p>':''}${p.chapters.map((c,i)=>`<article class="story-chapter ${c.image ? 'with-image' : 'text-only'}"><div class="story-copy"><div class="chapter-title"><span>${String(i+1).padStart(2,'0')}</span><h3>${esc(c.heading)}</h3></div><div class="chapter-text">${paragraphs(c.text)}</div></div>${c.image?`<figure>${photoButton(c.image, c.caption || `${p.name} · ${c.heading}`)}${c.caption?`<figcaption>${esc(c.caption)}</figcaption>`:''}</figure>`:''}</article>`).join('')}${p.observations.length?`<h3 class="record-title">再一次相遇</h3>${p.observations.map(o=>`<article class="observation">${o.date||o.location?`<p class="observation-meta">${[o.date,o.location].filter(Boolean).map(esc).join(' · ')}</p>`:''}<h3>${esc(o.title)}</h3>${paragraphs(o.text)}</article>`).join('')}`:''}</section>
   ${photos.length?`<section id="photos" class="detail-section"><p class="eyebrow">IN THE FIELD / 实拍影像</p><h2>再多看几眼 <span>${photos.length}</span></h2><div class="gallery">${photos.map(photo=>`<figure>${photoButton(photo.image,photo.caption||p.name)}${photo.caption?`<figcaption>${esc(photo.caption)}</figcaption>`:''}</figure>`).join('')}</div></section>`:''}
   ${p.drawings.length?`<section id="drawings" class="detail-section"><p class="eyebrow">NATURE SKETCHES / 自然手绘</p><h2>用画笔，再认识一次</h2><div class="sketches">${p.drawings.map((d,i)=>`<figure>${photoButton(d.image,d.caption || `${p.name} · 手绘 ${i+1}`)}${d.caption?`<figcaption>${esc(d.caption)}</figcaption>`:''}</figure>`).join('')}</div></section>`:''}
   ${taxonomySection(p)}${companionSection(p)}
-  <section id="sources" class="detail-section"><p class="eyebrow">SOURCE / 资料来源</p><h2>从记录到档案</h2><h3>分类来源</h3>${taxonomyCitation(p)}${p.references?.length?`<h3>文稿引用与核对资料</h3><ol class="references">${p.references.map(r=>`<li>${r.url && /^https?:\/\//i.test(r.url)?`<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)} ↗</a>`:esc(r.title)}${r.author||r.year?`<span>${[r.author,r.year].filter(Boolean).map(esc).join(' · ')}</span>`:''}</li>`).join('')}</ol>`:''}<h3>素材来源</h3><p>素材来源自视频和作者的文稿整理。${p.video && /^https?:\/\//i.test(p.video)?`<a href="${esc(p.video)}" target="_blank" rel="noopener noreferrer">▷ 看这期视频 ↗</a>`:""}</p></section></div>
+  <section id="sources" class="detail-section"><p class="eyebrow">SOURCE / 资料来源</p><h2>从记录到档案</h2><h3>分类来源</h3>${taxonomyCitation(p)}${p.references?.length?`<h3>文稿引用与核对资料</h3><ol class="references">${p.references.map(r=>`<li>${r.url && /^https?:\/\//i.test(r.url)?`<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)} ↗</a>`:esc(r.title)}${r.author||r.year?`<span>${[r.author,r.year].filter(Boolean).map(esc).join(' · ')}</span>`:''}</li>`).join('')}</ol>`:''}<h3>素材来源</h3><p>素材来源自视频和作者的文稿整理。${p.video && /^https?:\/\//i.test(p.video)?`<a data-video-archive="${esc(p.id)}" data-video-position="资料来源" href="${esc(p.video)}" target="_blank" rel="noopener noreferrer">▷ 看这期视频 ↗</a>`:""}</p></section></div>
   </div>
   <section class="more"><h2>继续认识身边的自然</h2><div>${Catalog.recommendations(plants,p).map(x=>`<a href="${link(x)}">${x.cover?`<img src="${esc(x.cover)}" alt="${esc(x.name)}" loading="lazy">`:''}<span>${esc(x.name)}<small>${esc(x.family)}</small></span><span aria-hidden="true">↗</span></a>`).join('')}</div></section></div>`;
   main.querySelectorAll('.story-chapter').forEach((el,i)=>el.id=`chapter-${i+1}`);
@@ -161,6 +161,30 @@ function classificationPage() {
   main.querySelector('form').addEventListener('submit',e=>e.preventDefault());input.addEventListener('input',renderDatabase);
   main.querySelector('#expand-taxonomy').addEventListener('click',()=>main.querySelectorAll('.taxonomy-node').forEach(n=>n.open=true));main.querySelector('#collapse-taxonomy').addEventListener('click',()=>main.querySelectorAll('.taxonomy-node').forEach(n=>n.open=false));renderDatabase();
 }
+function statisticsPage() {
+  document.title = '访问数据统计 · 一株植物的株';
+  main.innerHTML = `<section class="statistics-page" aria-labelledby="statistics-title">
+    <a class="statistics-back" href="#">← 返回首页</a>
+    <div class="statistics-heading"><div><p class="eyebrow">VISITS / 访问数据统计</p><h1 id="statistics-title">看看大家的足迹</h1></div><a class="statistics-open" href="https://cloud.umami.is/share/PVKBx7aokbYPgAo7" target="_blank" rel="noopener noreferrer">单独打开统计面板 ↗</a></div>
+    <p class="statistics-note">访客数、浏览量与访问趋势，由 Umami 提供。Visitors 为访客数，Views 为浏览量；可在面板中选择统计时间。</p>
+    <div class="statistics-tabs" role="group" aria-label="统计类别"><button type="button" data-statistics="overview" aria-pressed="true">访问概览</button><button type="button" data-statistics="species" aria-pressed="false">物种浏览</button><button type="button" data-statistics="graphs" aria-pressed="false">图谱切换</button><button type="button" data-statistics="videos" aria-pressed="false">视频点击</button><button type="button" data-statistics="defaults" aria-pressed="false">默认图谱（参考）</button></div>
+    <details class="statistics-guide"><summary>怎么看内容排行？</summary><p>上方按钮已按事件名称筛选：<strong>物种浏览｜</strong>看物种人气，<strong>图谱切换｜</strong>看主动选择的图谱，<strong>视频点击｜</strong>看视频入口点击。名称后直接显示中文物种名或图谱名。</p><p><strong>图谱默认｜</strong>单独记录默认打开的图谱，不与主动选择混算。同一物种内切换栏目不重复计入物种浏览；离开后再次进入或刷新会计为新一次浏览。视频点击不等于实际播放，外部扫码不计入。</p></details>
+    <iframe class="statistics-frame" src="https://cloud.umami.is/share/PVKBx7aokbYPgAo7" title="一株植物的株公开访问统计" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <p class="statistics-note">若面板未能显示，可使用上方链接单独打开。统计从接入后开始记录，本地预览不计入。</p>
+  </section>`;
+  const share = 'https://cloud.umami.is/share/PVKBx7aokbYPgAo7';
+  const eventShare = 'https://cloud.umami.is/analytics/us/share/PVKBx7aokbYPgAo7/events';
+  const prefixes = {species:'物种浏览｜',graphs:'图谱切换｜',videos:'视频点击｜',defaults:'图谱默认｜'};
+  main.querySelectorAll('[data-statistics]').forEach(button => button.addEventListener('click',()=>{
+    if (button.getAttribute('aria-pressed') === 'true') return;
+    const key = button.dataset.statistics;
+    const url = key === 'overview' ? share : eventShare+'?event='+encodeURIComponent('c.'+prefixes[key]);
+    main.querySelector('.statistics-frame').src = url;
+    main.querySelector('.statistics-frame').title = '公开访问统计 · '+button.textContent;
+    main.querySelector('.statistics-open').href = url;
+    main.querySelectorAll('[data-statistics]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  }));
+}
 function atlasPage() {
   document.title = '图谱 · 一株植物的株';
   main.innerHTML = '<iframe id="atlas-frame" class="atlas-frame" src="atlas/index.html" title="物种分类图谱与碰撞漫游" allow="fullscreen" allowfullscreen></iframe>';
@@ -176,10 +200,12 @@ function route() {
   rememberHomeTree();
   if (location.hash === '#main') { main.focus({preventScroll:true}); return; }
   const parts = location.hash.slice(1).split('/');
-  document.querySelector('.nav-index').classList.toggle('current',!['classification','atlas'].includes(parts[0]));
+  if (parts[0] !== 'plant') window.AtlasAnalytics?.leaveSpecies();
+  document.querySelector('.nav-index').classList.toggle('current',!['classification','atlas','statistics'].includes(parts[0]));
   document.querySelector('.nav-classification').classList.toggle('current',parts[0] === 'classification');
   document.querySelector('.nav-atlas').classList.toggle('current',parts[0] === 'atlas');
   document.body.classList.toggle('atlas-page',parts[0] === 'atlas');
+  if (parts[0] === 'statistics') { currentId = null; statisticsPage(); window.scrollTo(0,0); main.focus({preventScroll:true}); return; }
   if (parts[0] === 'atlas') { currentId = null; atlasPage(); window.scrollTo(0,0); return; }
   if (parts[0] === 'classification') { currentId = null; classificationPage(); window.scrollTo(0,0); return; }
   if (parts[0] === 'plant') {
@@ -187,15 +213,16 @@ function route() {
     const canonical=window.LIBRARY.legacyAliases?.[id];
     if(canonical){location.replace('#plant/'+encodeURIComponent(canonical)+(parts[2]?'/'+parts[2]:''));return;}
     if (currentId !== id) { detailPage(id); currentId = id; window.scrollTo(0,0); main.focus({preventScroll:true}); }
+    window.AtlasAnalytics?.species(id);
     if (parts[2]) document.getElementById(parts[2])?.scrollIntoView({behavior:'smooth'});
   } else { currentId = null; indexPage(); window.scrollTo(0,0); }
 }
 document.addEventListener('keydown', e => { if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName) && document.querySelector('#search')) { e.preventDefault(); document.querySelector('#search').focus(); } });
 window.addEventListener('hashchange', route);
 route();
-if (location.hostname === '127.0.0.1' && location.port === '8780') {
+if (['127.0.0.1', 'localhost', '[::1]'].includes(location.hostname)) {
   const editorLink = document.createElement('a');
   editorLink.href = '/editor';
   editorLink.textContent = '本地编辑 ↗';
-  document.querySelector('footer').append(editorLink);
+  (document.querySelector('.footer-links') || document.querySelector('footer')).append(editorLink);
 }

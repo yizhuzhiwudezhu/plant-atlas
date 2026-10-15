@@ -21,10 +21,10 @@
   svg=d3.select('#chart');layer=svg.append('g').attr('class','graph-layer');
   zoom=d3.zoom().scaleExtent([.005,32]).filter(event=>!forceDrag&&(state.view!=='game'||event.type==='wheel')&&(!event.ctrlKey||event.type==='wheel')&&!event.button).on('zoom',event=>{state.transform=state.view==='game'?d3.zoomIdentity.translate(width/2,height/2).scale(event.transform.k):event.transform;layer.attr('transform',state.transform);$('#zoom-value').textContent=Math.round(event.transform.k*100)+'%';scheduleLabels();});
   svg.call(zoom).on('dblclick.zoom',null).attr('tabindex',0).on('keydown.pan',event=>{const direction={ArrowLeft:[1,0],ArrowRight:[-1,0],ArrowUp:[0,1],ArrowDown:[0,-1]}[event.key];if(direction&&event.target===svg.node()){event.preventDefault();if(state.view!=='game')svg.call(zoom.translateBy,direction[0]*width/5/state.transform.k,direction[1]*height/5/state.transform.k);}});
-  bindControls();updateSearch();render(true);$('#loading').hidden=true;
+  bindControls();updateSearch();render(true);$('#loading').hidden=true;window.AtlasAnalytics?.graph(state.view,'default');
   let resizeTimer;new ResizeObserver(()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>render(true),120);}).observe($('#stage'));
   document.addEventListener('visibilitychange',()=>{if(state.view!=='game')return;if(document.hidden){gamePointer.active=false;activeSimulation?.stop();}else if(!gamePaused)activeSimulation?.alpha(.3).alphaTarget(.3).restart();});
- }catch(error){$('#loading').textContent='加载失败：'+error.message+'。请通过“打开3.9.3版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
+ }catch(error){$('#loading').textContent='加载失败：'+error.message+'。请通过“打开4.1版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
 
  function nodeLabel(n){return state.labels==='scientific'?n.scientific:(n.chinese||n.scientific);}
  function lineage(n){const path=[];while(n){path.unshift(n);n=n.parent?map.get(n.parent):null;}return path;}
@@ -324,7 +324,7 @@
    return `<button class="palette-choice" data-palette="${key}" aria-label="${name}" aria-pressed="${key===state.palette}"><span class="palette-swatch" aria-hidden="true" style="background:linear-gradient(90deg,${gradient})"></span><span>${shortName}</span></button>`;
   }).join('');
   $('#palette-buttons').querySelectorAll('button').forEach(button=>button.onclick=()=>{state.palette=button.dataset.palette;render(false);});
-  setLayoutOptions();$('.view-tabs').querySelectorAll('button[data-view]').forEach(b=>b.onclick=()=>{state.view=b.dataset.view;$('.view-tabs').querySelectorAll('button[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));setLayoutOptions();render(true);});
+  setLayoutOptions();$('.view-tabs').querySelectorAll('button[data-view]').forEach(b=>b.onclick=()=>{if(state.view===b.dataset.view)return;state.view=b.dataset.view;$('.view-tabs').querySelectorAll('button[data-view]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));setLayoutOptions();render(true);window.AtlasAnalytics?.graph(state.view,'switch');});
   $('#search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{const oldDepth=state.depth,oldScope=state.scope;state.query=$('#search').value.trim();state.scope='life';state.selected=null;if(state.query){let deepest=0;for(const t of taxa)for(let i=0;i<t.ranks.length;i++)if(state.query.toLowerCase().split(/\s+/).some(term=>[t.ranks[i].chinese,t.ranks[i].scientific].some(s=>s.toLowerCase().includes(term))))deepest=Math.max(deepest,i);state.depth=Math.max(4,deepest,state.hiddenThrough+1);$('#depth').value=String(state.depth);state.collapsed.clear();}updateSearch();render(state.depth!==oldDepth||state.scope!==oldScope);},160);};
   
   for(const key of ['layout','depth','hiddenThrough','sort','labels','labelPolicy','lines'])$('#'+key).onchange=()=>{state[key]=['depth','hiddenThrough'].includes(key)?Number($('#'+key).value):$('#'+key).value;if(key==='hiddenThrough'&&state.hiddenThrough>=state.depth){state.depth=state.hiddenThrough+1;$('#depth').value=String(state.depth);}if(key==='depth'&&state.depth<=state.hiddenThrough){state.hiddenThrough=state.depth-1;$('#hiddenThrough').value=String(state.hiddenThrough);}if(key==='depth'||key==='hiddenThrough')state.collapsed.clear();render(true);};
