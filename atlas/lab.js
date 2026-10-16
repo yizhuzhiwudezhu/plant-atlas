@@ -24,7 +24,7 @@
   bindControls();updateSearch();render(true);$('#loading').hidden=true;window.AtlasAnalytics?.graph(state.view,'default');
   let resizeTimer;new ResizeObserver(()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>render(true),120);}).observe($('#stage'));
   document.addEventListener('visibilitychange',()=>{if(state.view!=='game')return;if(document.hidden){gamePointer.active=false;activeSimulation?.stop();}else if(!gamePaused)activeSimulation?.alpha(.3).alphaTarget(.3).restart();});
- }catch(error){$('#loading').textContent='加载失败：'+error.message+'。请通过“打开4.1版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
+ }catch(error){$('#loading').textContent='加载失败：'+error.message+'。请通过“打开4.2版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
 
  function nodeLabel(n){return state.labels==='scientific'?n.scientific:(n.chinese||n.scientific);}
  function lineage(n){const path=[];while(n){path.unshift(n);n=n.parent?map.get(n.parent):null;}return path;}

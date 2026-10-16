@@ -1,6 +1,6 @@
 {
-  "version": "4.1",
-  "total": 119,
+  "version": "4.2",
+  "total": 134,
   "countUnit": "视频主对象档案",
   "taxa": [
     {
@@ -111,6 +111,7 @@
           "sourceScientific": "Arisaema"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Cwpgz3EA3/"
     },
     {
@@ -220,6 +221,7 @@
           "sourceScientific": "Saraca"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1diXdBSEYe/"
     },
     {
@@ -317,6 +319,7 @@
       "videoOtherVarieties": "",
       "relatedPlants": [],
       "chineseNameSources": [],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1B6hgz9ENA/"
     },
     {
@@ -427,6 +430,7 @@
           "sourceScientific": "Gnetum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1BLWEztEg9/"
     },
     {
@@ -555,6 +559,7 @@
           "sourceScientific": "Pinus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1A3niz5Edt/"
     },
     {
@@ -664,6 +669,7 @@
           "sourceScientific": "Jatropha"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1XbKE6oEnn/"
     },
     {
@@ -774,6 +780,7 @@
           "sourceScientific": "Sterculia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV115gkzuE65/"
     },
     {
@@ -884,6 +891,7 @@
           "sourceScientific": "Nicandra"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1ZfetzLEWZ/"
     },
     {
@@ -994,6 +1002,7 @@
           "sourceScientific": "Mesembryanthemum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1HfKo6DEZu/"
     },
     {
@@ -1103,6 +1112,7 @@
           "sourceScientific": "Senecio"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1QcvYBeEdV/"
     },
     {
@@ -1214,6 +1224,7 @@
           "sourceScientific": "Strobilanthes"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Kkga6cEGv/"
     },
     {
@@ -1323,6 +1334,7 @@
           "sourceScientific": "Acacia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1M58ozNEtR/"
     },
     {
@@ -1433,6 +1445,7 @@
           "sourceScientific": "Eranthemum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1NgASz6E6Q/"
     },
     {
@@ -1542,6 +1555,7 @@
           "sourceScientific": "Talinum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1AEmnBmETW/"
     },
     {
@@ -1653,6 +1667,7 @@
           "sourceScientific": "Aquilaria"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Vr8CzuEY2/"
     },
     {
@@ -1762,6 +1777,7 @@
           "sourceScientific": "Dahlia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1aeHkz1EZK/"
     },
     {
@@ -1890,6 +1906,7 @@
         }
       ],
       "chineseNameSources": [],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1JaM86GESf/"
     },
     {
@@ -2016,6 +2033,7 @@
           "sourceScientific": "Strelitzia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1qYNE6cEnS/"
     },
     {
@@ -2159,6 +2177,7 @@
           "sourceScientific": "Hedychium"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1xvguz2Ev7/"
     },
     {
@@ -2286,6 +2305,7 @@
           "sourceScientific": "Triadica"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1eqkYBsETX/"
     },
     {
@@ -2412,6 +2432,7 @@
           "sourceScientific": "Acronychia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV15y1vBuEye/"
     },
     {
@@ -2546,6 +2567,7 @@
           "sourceScientific": "Dianella"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV19kzNBiEMt/"
     },
     {
@@ -2664,6 +2686,7 @@
           "sourceScientific": "Piper"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1CKFmz9EN9/"
     },
     {
@@ -2773,6 +2796,7 @@
           "sourceScientific": "Litsea"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1rPVq6GEEf/"
     },
     {
@@ -2894,6 +2918,7 @@
         }
       ],
       "chineseNameSources": [],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1vUnvzFEjX/"
     },
     {
@@ -3003,6 +3028,7 @@
           "sourceScientific": "Aristolochia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1TfDeBBErB/"
     },
     {
@@ -3112,6 +3138,7 @@
           "sourceScientific": "Alcantarea"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Rej36iE9L/"
     },
     {
@@ -3222,6 +3249,7 @@
           "sourceScientific": "Hydrangea"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1cF9mBTEoV/"
     },
     {
@@ -3333,6 +3361,7 @@
           "sourceScientific": "Mikania"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1j5qABcEf8/"
     },
     {
@@ -3442,6 +3471,7 @@
           "sourceScientific": "Handeliodendron"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1UhbV68EhS/"
     },
     {
@@ -3568,6 +3598,7 @@
           "sourceScientific": "Sambucus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV18datzhE6g/"
     },
     {
@@ -3677,6 +3708,7 @@
           "sourceScientific": "Eulophia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1hP7M6WECJ/"
     },
     {
@@ -3786,6 +3818,7 @@
           "sourceScientific": "Hibiscus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1sX1KB3E1e/"
     },
     {
@@ -3936,6 +3969,7 @@
           "sourceScientific": "Strobilanthes"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1vsAozVETU/"
     },
     {
@@ -4045,6 +4079,7 @@
           "sourceScientific": "Maclura"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1D2yPBkE2e/"
     },
     {
@@ -4155,6 +4190,7 @@
           "sourceScientific": "Gardenia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1gR5x6aEz8/"
     },
     {
@@ -4264,6 +4300,7 @@
           "sourceScientific": "Rhodomyrtus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1AjsJz6EiS/"
     },
     {
@@ -4374,6 +4411,7 @@
           "sourceScientific": "Firmiana"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1ByYszKEWc/"
     },
     {
@@ -4485,6 +4523,7 @@
           "sourceScientific": "Citrus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1dsut6wEvE/"
     },
     {
@@ -4582,6 +4621,7 @@
       "videoOtherVarieties": "",
       "relatedPlants": [],
       "chineseNameSources": [],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Wm7o6EE2m/"
     },
     {
@@ -4691,6 +4731,7 @@
           "sourceScientific": "Rhododendron"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1gZXNBeEwS/"
     },
     {
@@ -4800,6 +4841,7 @@
           "sourceScientific": "Solanum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1aNe16KE6Y/"
     },
     {
@@ -4896,6 +4938,7 @@
       "videoOtherVarieties": "",
       "relatedPlants": [],
       "chineseNameSources": [],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1km6vBBEVH/"
     },
     {
@@ -5005,6 +5048,7 @@
           "sourceScientific": "Cerbera"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1vG2VByEEt/"
     },
     {
@@ -5131,6 +5175,7 @@
         }
       ],
       "chineseNameSources": [],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1GnVA6YEKt/"
     },
     {
@@ -5237,6 +5282,7 @@
           "sourceScientific": "Spathodea"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1cvaU6xEB4/"
     },
     {
@@ -5365,6 +5411,7 @@
           "sourceScientific": "Magnolia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV11PdVBpEy5/"
     },
     {
@@ -5474,6 +5521,7 @@
           "sourceScientific": "Woodwardia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1HD736SErF/"
     },
     {
@@ -5611,6 +5659,7 @@
           "sourceScientific": "Foeniculum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1wHw1zXExF/"
     },
     {
@@ -5720,6 +5769,7 @@
           "sourceScientific": "Mallotus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1chCFB5Ek1/"
     },
     {
@@ -5827,6 +5877,7 @@
           "sourceScientific": "Paraleonurus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1fdL96tE49/"
     },
     {
@@ -5933,6 +5984,7 @@
           "sourceScientific": "Agapanthus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1zL3kzaEHS/"
     },
     {
@@ -6043,6 +6095,7 @@
           "sourceScientific": "Mentha"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1z3duBwEC7/"
     },
     {
@@ -6153,6 +6206,7 @@
           "sourceScientific": "Rhus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV11iSsBBEiq/"
     },
     {
@@ -6263,6 +6317,7 @@
           "sourceScientific": "Microcos"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1CAh8zDEkm/"
     },
     {
@@ -6364,7 +6419,8 @@
           "rank": "unresolved",
           "evidenceType": "manuscript-mention",
           "note": "视频中亦称波斯菊，用于同属花形比较。",
-          "identificationStatus": "名称按视频记录；未单独核对接受名。"
+          "identificationStatus": "名称按视频记录；未单独核对接受名。",
+          "archiveId": "20250324-01"
         }
       ],
       "chineseNameSources": [
@@ -6381,6 +6437,7 @@
           "sourceScientific": "Cosmos"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1kUYM67E8j/"
     },
     {
@@ -6490,6 +6547,7 @@
           "sourceScientific": "Zanthoxylum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV12aNb6rEx7/"
     },
     {
@@ -6599,6 +6657,7 @@
           "sourceScientific": "Alstonia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1e8WRz9Enr/"
     },
     {
@@ -6708,6 +6767,7 @@
           "sourceScientific": "Gynura"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1C2Lh6KEpS/"
     },
     {
@@ -6817,6 +6877,7 @@
           "sourceScientific": "Eugenia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1jVCMBfEvW/"
     },
     {
@@ -6926,6 +6987,7 @@
           "sourceScientific": "Zeuxine"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1x2wXzUE1T/"
     },
     {
@@ -7053,6 +7115,7 @@
           "sourceScientific": "Ocimum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1JvcCzGEyH/"
     },
     {
@@ -7162,6 +7225,7 @@
           "sourceScientific": "Podocarpus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1XVaN6DEEx/"
     },
     {
@@ -7271,6 +7335,7 @@
           "sourceScientific": "Strophanthus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1mf1WBFECe/"
     },
     {
@@ -7387,6 +7452,7 @@
           "sourceScientific": "Brassica"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1svLB6oEa6/"
     },
     {
@@ -7498,6 +7564,7 @@
           "sourceScientific": "Selaginella"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1qUbC68EJD/"
     },
     {
@@ -7604,6 +7671,7 @@
           "sourceScientific": "Daucus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1w1o4BdEkq/"
     },
     {
@@ -7715,6 +7783,7 @@
           "sourceScientific": "Arundo"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV17zxazTEGF/"
     },
     {
@@ -7824,6 +7893,7 @@
           "sourceScientific": "Scaevola"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1hCYNzNEFH/"
     },
     {
@@ -7951,6 +8021,7 @@
           "sourceScientific": "Fragaria"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1YHP4zoEGc/"
     },
     {
@@ -8061,6 +8132,7 @@
           "sourceScientific": "Schima"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1hGEE6QE8L/"
     },
     {
@@ -8179,6 +8251,7 @@
           "sourceScientific": "Garcinia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1ZVawzPE7N/"
     },
     {
@@ -8317,6 +8390,7 @@
           "sourceScientific": "Rauvolfia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1cZbQ64EcR/"
     },
     {
@@ -8429,6 +8503,7 @@
           "sourceScientific": "Anredera"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1j7nuzsEEv/"
     },
     {
@@ -8538,6 +8613,7 @@
           "sourceScientific": "Tadehagi"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Nksmz4ExW/"
     },
     {
@@ -8647,6 +8723,7 @@
           "sourceScientific": "Ricinus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV18VpizfE1z/"
     },
     {
@@ -8756,6 +8833,7 @@
           "sourceScientific": "Ruellia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1gK4wz3EkD/"
     },
     {
@@ -8865,6 +8943,7 @@
           "sourceScientific": "Psychotria"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1BD6gB8EEn/"
     },
     {
@@ -8983,6 +9062,7 @@
           "sourceScientific": "Lantana"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1jTf2B3EDV/"
     },
     {
@@ -9090,6 +9170,7 @@
           "sourceScientific": "Malus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1f9QtB6EJc/"
     },
     {
@@ -9199,6 +9280,7 @@
           "sourceScientific": "Orychophragmus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1UL9CBzErF/"
     },
     {
@@ -9310,6 +9392,7 @@
           "sourceScientific": "Cunninghamia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1TSJCzqEda/"
     },
     {
@@ -9419,6 +9502,7 @@
           "sourceScientific": "Toxicodendron"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1kK9QBUEAa/"
     },
     {
@@ -9528,6 +9612,7 @@
           "sourceScientific": "Camellia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV16QZHBgEw3/"
     },
     {
@@ -9636,6 +9721,7 @@
           "note": "采用 Wikidata 中文辅助标签；尚未核实植物智对应中文属名，不作为正式中文定名。正式属名仍按 POWO 的 Callianthe。"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Gx37zUEuH/"
     },
     {
@@ -9762,6 +9848,7 @@
           "sourceScientific": "Heritiera"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV17oBFBZET9/"
     },
     {
@@ -9871,6 +9958,7 @@
           "sourceScientific": "Ginkgo"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1ekUkBeEDF/"
     },
     {
@@ -9966,6 +10054,7 @@
       "videoOtherVarieties": "",
       "relatedPlants": [],
       "chineseNameSources": [],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1YtTs61E3W/"
     },
     {
@@ -10076,6 +10165,7 @@
           "sourceScientific": "Angraecum"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1fTQZBsE7U/"
     },
     {
@@ -10186,6 +10276,7 @@
           "sourceScientific": "Hellenia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV17F4bzcEDj/"
     },
     {
@@ -10296,6 +10387,7 @@
           "sourceScientific": "Dalbergia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV14ViTBWE6x/"
     },
     {
@@ -10448,6 +10540,7 @@
           "status": "verified"
         }
       ],
+      "acceptedTaxonRank": "genus",
       "video": "https://www.bilibili.com/video/BV1Jrtc6GEhj/"
     },
     {
@@ -10557,6 +10650,7 @@
           "sourceScientific": "Celosia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1t9BhBwEbp/"
     },
     {
@@ -10675,6 +10769,7 @@
           "sourceScientific": "Pinus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1Nd596vEYQ/"
     },
     {
@@ -10811,6 +10906,7 @@
           "sourceScientific": "Gynochthodes"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1fZhuzpEhN/"
     },
     {
@@ -10922,6 +11018,7 @@
           "sourceScientific": "Platycerium"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1gdGw6oEss/"
     },
     {
@@ -11031,6 +11128,7 @@
           "sourceScientific": "Gahnia"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1SKkcBxEoD/"
     },
     {
@@ -11149,6 +11247,7 @@
           "sourceScientific": "Passiflora"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1fvbDzaENG/"
     },
     {
@@ -11268,6 +11367,7 @@
           "sourceScientific": "Dimocarpus"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1cmhTzpE2P/"
     },
     {
@@ -11394,6 +11494,7 @@
         }
       ],
       "cultivarName": "Erect",
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1dmps6dEvi/"
     },
     {
@@ -11513,6 +11614,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1wNLHzWEZA/"
     },
     {
@@ -11632,6 +11734,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1d353zyEhe/"
     },
     {
@@ -11744,6 +11847,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1t2dNYGEGe/"
     },
     {
@@ -11880,6 +11984,7 @@
           "method": "public page checked this intake"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1qL411v7xZ/"
     },
     {
@@ -11992,6 +12097,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1aNMuzJEGa/"
     },
     {
@@ -12104,6 +12210,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1h6ExzdEy3/"
     },
     {
@@ -12216,6 +12323,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV115jmzKERm/"
     },
     {
@@ -12328,6 +12436,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1BMVtzZEsj/"
     },
     {
@@ -12454,6 +12563,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1aYT7zuEyw/"
     },
     {
@@ -12566,6 +12676,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1pbM3zrEKh/"
     },
     {
@@ -12678,6 +12789,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1B6TTz9ERZ/"
     },
     {
@@ -12798,6 +12910,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1V55azPEua/"
     },
     {
@@ -12981,6 +13094,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1HEKVzgEp1/"
     },
     {
@@ -13101,6 +13215,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1KaEfz3Ehg/"
     },
     {
@@ -13264,6 +13379,7 @@
         "scope": "园艺名称与科属对照，不代表照片鉴定或具体克隆认证"
       },
       "cultivarName": "Maudiae",
+      "acceptedTaxonRank": "",
       "video": "https://www.bilibili.com/video/BV1htNvzUEXE/"
     },
     {
@@ -13376,6 +13492,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1hFEAzREVr/"
     },
     {
@@ -13496,6 +13613,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1otKizhECC/"
     },
     {
@@ -13608,6 +13726,7 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV13wKPzFEAc/"
     },
     {
@@ -13720,7 +13839,1900 @@
           "reuseChecked": "2026-10-14"
         }
       ],
+      "acceptedTaxonRank": "species",
       "video": "https://www.bilibili.com/video/BV1mRG1zxEqH/"
+    },
+    {
+      "id": "20250122-01",
+      "archiveId": "20250122-01",
+      "name": "五爪金龙",
+      "scientificName": "Ipomoea cairica (L.) Sweet",
+      "acceptedScientificName": "Ipomoea cairica (L.) Sweet",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "牵牛藤"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Solanales",
+          "chinese": "茄目",
+          "status": "provided",
+          "displayText": "茄目 / Solanales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Convolvulaceae",
+          "chinese": "旋花科",
+          "status": "provided",
+          "displayText": "旋花科 / Convolvulaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Ipomoea",
+          "chinese": "番薯属",
+          "status": "provided",
+          "displayText": "番薯属 / Ipomoea"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Ipomoea cairica",
+          "chinese": "五爪金龙",
+          "status": "provided",
+          "displayText": "五爪金龙 / Ipomoea cairica"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:268564-1",
+        "record": "480835",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-01-22",
+      "videoPublishedTime": "17:23:06",
+      "originalVideoTitles": [
+        "入侵植物系列 | 外来植物竟然有如此传统的称呼？五爪金龙，植物手绘"
+      ],
+      "videoOtherVarieties": "牵牛花；圆叶牵牛",
+      "relatedPlants": [
+        {
+          "name": "牵牛花",
+          "scientific": "",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": ""
+        },
+        {
+          "name": "圆叶牵牛",
+          "scientific": "Ipomoea purpurea (L.) Roth",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30043043-2",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        }
+      ],
+      "chineseNameSources": [
+        {
+          "scientific": "Ipomoea",
+          "chinese": "番薯属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Ipomoea",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Ipomoea.html",
+          "sha256": "1c3524dd5dd0f4a5ccf2dc9d3097532c809756ba71dbd50bd53d2b99c5622748",
+          "status": "verified",
+          "sourceScientific": "Ipomoea",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1ACfbYVEDz/"
+    },
+    {
+      "id": "20250218-01",
+      "archiveId": "20250218-01",
+      "name": "吊钟花",
+      "scientificName": "Enkianthus quinqueflorus Lour.",
+      "acceptedScientificName": "Enkianthus quinqueflorus Lour.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "铃儿花"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Ericales",
+          "chinese": "杜鹃花目",
+          "status": "provided",
+          "displayText": "杜鹃花目 / Ericales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Ericaceae",
+          "chinese": "杜鹃花科",
+          "status": "provided",
+          "displayText": "杜鹃花科 / Ericaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Enkianthus",
+          "chinese": "吊钟花属",
+          "status": "provided",
+          "displayText": "吊钟花属 / Enkianthus"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Enkianthus quinqueflorus",
+          "chinese": "吊钟花",
+          "status": "provided",
+          "displayText": "吊钟花 / Enkianthus quinqueflorus"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:328088-1",
+        "record": "2789331",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-02-18",
+      "videoPublishedTime": "17:01:30",
+      "originalVideoTitles": [
+        "铃铛挂了一树，摇一摇吊钟花，春天到了-植物手绘【4k】梧桐山"
+      ],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "chineseNameSources": [
+        {
+          "scientific": "Enkianthus",
+          "chinese": "吊钟花属",
+          "provider": "植物智 / 深圳植物志",
+          "url": "https://www.iplant.cn/fsz/info/Enkianthus%20quinqueflorus",
+          "checked": "2026-10-16",
+          "status": "verified",
+          "method": "本次核对植物智中文科属对照；不采用其正式上级体系"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1TRAaeTEn2/"
+    },
+    {
+      "id": "20241231-01",
+      "archiveId": "20241231-01",
+      "name": "含羞草",
+      "scientificName": "Mimosa pudica L.",
+      "acceptedScientificName": "Mimosa pudica L.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Fabales",
+          "chinese": "豆目",
+          "status": "provided",
+          "displayText": "豆目 / Fabales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Fabaceae",
+          "chinese": "豆科",
+          "status": "provided",
+          "displayText": "豆科 / Fabaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Mimosa",
+          "chinese": "含羞草属",
+          "status": "provided",
+          "displayText": "含羞草属 / Mimosa"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Mimosa pudica",
+          "chinese": "含羞草",
+          "status": "provided",
+          "displayText": "含羞草 / Mimosa pudica"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:313242-2",
+        "record": "2373711",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2024-12-31",
+      "videoPublishedTime": "18:19:06",
+      "originalVideoTitles": [
+        "含羞草为什么会害羞？摸它会掉头发？如何养护？"
+      ],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "chineseNameSources": [
+        {
+          "scientific": "Mimosa",
+          "chinese": "含羞草属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Mimosa",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Mimosa.html",
+          "sha256": "16b18c9a4a57cc63f7c600791f118598e4f1922ce180113824271869ad37221c",
+          "status": "verified",
+          "sourceScientific": "Mimosa",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1hC6HYsE2k/"
+    },
+    {
+      "id": "20250311-01",
+      "archiveId": "20250311-01",
+      "name": "宫粉羊蹄甲",
+      "scientificName": "Bauhinia variegata L.",
+      "acceptedScientificName": "Bauhinia variegata L.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "宫粉紫荆",
+        "洋紫荆"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Fabales",
+          "chinese": "豆目",
+          "status": "provided",
+          "displayText": "豆目 / Fabales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Fabaceae",
+          "chinese": "豆科",
+          "status": "provided",
+          "displayText": "豆科 / Fabaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Bauhinia",
+          "chinese": "羊蹄甲属",
+          "status": "provided",
+          "displayText": "羊蹄甲属 / Bauhinia"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Bauhinia variegata",
+          "chinese": "宫粉羊蹄甲",
+          "status": "provided",
+          "displayText": "宫粉羊蹄甲 / Bauhinia variegata"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:481756-1",
+        "record": "2672176",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-03-11",
+      "videoPublishedTime": "21:21:40",
+      "originalVideoTitles": [
+        "竟然长得跟羊蹄很像？有点难区分的羊蹄甲属植物，哪个是香港区花？羊蹄甲|红花羊蹄甲|宫粉紫荆|白花宫粉羊蹄甲"
+      ],
+      "videoOtherVarieties": "羊蹄甲；红花羊蹄甲；白花宫粉羊蹄甲",
+      "relatedPlants": [
+        {
+          "name": "羊蹄甲",
+          "scientific": "Bauhinia purpurea L.",
+          "note": "本期对照介绍的羊蹄甲属对象，不与主对象合并。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:481605-1",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        },
+        {
+          "name": "红花羊蹄甲",
+          "scientific": "Bauhinia × blakeana Dunn",
+          "note": "本期对照介绍的羊蹄甲属对象，不与主对象合并。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:481142-1",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        },
+        {
+          "name": "白花宫粉羊蹄甲",
+          "scientific": "Bauhinia variegata var. candida Voigt",
+          "note": "本期对照介绍的羊蹄甲属对象，不与主对象合并。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60474965-2",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        }
+      ],
+      "chineseNameSources": [
+        {
+          "scientific": "Bauhinia",
+          "chinese": "羊蹄甲属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Bauhinia",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Bauhinia.html",
+          "sha256": "78823fabd73cfef5d982fc9836b7c88a00d895c1f900fd032a17fb4fd58af5c8",
+          "status": "verified",
+          "sourceScientific": "Bauhinia",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV18zQGYxEyQ/"
+    },
+    {
+      "id": "20250205-01",
+      "archiveId": "20250205-01",
+      "name": "木豆",
+      "scientificName": "Cajanus cajan (L.) Huth",
+      "acceptedScientificName": "Cajanus cajan (L.) Huth",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "三叶豆"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Fabales",
+          "chinese": "豆目",
+          "status": "provided",
+          "displayText": "豆目 / Fabales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Fabaceae",
+          "chinese": "豆科",
+          "status": "provided",
+          "displayText": "豆科 / Fabaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Cajanus",
+          "chinese": "木豆属",
+          "status": "provided",
+          "displayText": "木豆属 / Cajanus"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Cajanus cajan",
+          "chinese": "木豆",
+          "status": "provided",
+          "displayText": "木豆 / Cajanus cajan"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1152177-2",
+        "record": "2690294",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-02-05",
+      "videoPublishedTime": "21:33:18",
+      "originalVideoTitles": [
+        "吃过红豆绿豆，你吃过木豆吗？三叶豆 植物手绘"
+      ],
+      "videoOtherVarieties": "微甘菊；鬼针草；银合欢",
+      "relatedPlants": [
+        {
+          "name": "微甘菊",
+          "scientific": "",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": "20260106-01"
+        },
+        {
+          "name": "鬼针草",
+          "scientific": "",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": ""
+        },
+        {
+          "name": "银合欢",
+          "scientific": "Leucaena leucocephala (Lam.) de Wit",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": "20250106-01",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:138955-2",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        }
+      ],
+      "chineseNameSources": [
+        {
+          "scientific": "Cajanus",
+          "chinese": "木豆属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Cajanus",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Cajanus.html",
+          "sha256": "b1d61c9216f9cabadc98c3867db0200a9f2b95287acab576b30c4509b510b972",
+          "status": "verified",
+          "sourceScientific": "Cajanus",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1zAP2ewEPm/"
+    },
+    {
+      "id": "20241216-01",
+      "archiveId": "20241216-01",
+      "name": "洋金凤",
+      "scientificName": "Caesalpinia pulcherrima (L.) Sw.",
+      "acceptedScientificName": "Caesalpinia pulcherrima (L.) Sw.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Fabales",
+          "chinese": "豆目",
+          "status": "provided",
+          "displayText": "豆目 / Fabales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Fabaceae",
+          "chinese": "豆科",
+          "status": "provided",
+          "displayText": "豆科 / Fabaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Caesalpinia",
+          "chinese": "小凤花属",
+          "status": "provided",
+          "displayText": "小凤花属 / Caesalpinia"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Caesalpinia pulcherrima",
+          "chinese": "洋金凤",
+          "status": "provided",
+          "displayText": "洋金凤 / Caesalpinia pulcherrima"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1164658-2",
+        "record": "2690052",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2024-12-16",
+      "videoPublishedTime": "14:13:39",
+      "originalVideoTitles": [
+        "长得跟凤凰有点像，花期很长很好看的花，洋金凤"
+      ],
+      "videoOtherVarieties": "凤凰木",
+      "relatedPlants": [
+        {
+          "name": "凤凰木",
+          "scientific": "Delonix regia (Bojer ex Hook.) Raf.",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:491231-1",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        }
+      ],
+      "chineseNameSources": [
+        {
+          "scientific": "Caesalpinia",
+          "chinese": "小凤花属",
+          "provider": "广西大学林学院 植物科普洋金凤",
+          "url": "https://lxy.gxu.edu.cn/info/1212/2943.htm",
+          "checked": "2026-10-16",
+          "status": "name-reference-found",
+          "method": "中文属名辅助对照；正式科学分类采用POWO"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1vDBKY2E6i/"
+    },
+    {
+      "id": "20250211-01",
+      "archiveId": "20250211-01",
+      "name": "番茄",
+      "scientificName": "Solanum lycopersicum L.",
+      "acceptedScientificName": "Solanum lycopersicum L.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "西红柿",
+        "小番茄",
+        "樱桃番茄",
+        "圣女果"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Solanales",
+          "chinese": "茄目",
+          "status": "provided",
+          "displayText": "茄目 / Solanales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Solanaceae",
+          "chinese": "茄科",
+          "status": "provided",
+          "displayText": "茄科 / Solanaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Solanum",
+          "chinese": "茄属",
+          "status": "provided",
+          "displayText": "茄属 / Solanum"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Solanum lycopersicum",
+          "chinese": "番茄",
+          "status": "provided",
+          "displayText": "番茄 / Solanum lycopersicum"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:316947-2",
+        "record": "2932342",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-02-11",
+      "videoPublishedTime": "11:02:35",
+      "originalVideoTitles": [
+        "番茄是水果还是蔬菜？小番茄 圣女果 植物手绘"
+      ],
+      "videoOtherVarieties": "菟丝子",
+      "relatedPlants": [
+        {
+          "name": "菟丝子",
+          "scientific": "",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": ""
+        }
+      ],
+      "chineseNameSources": [
+        {
+          "scientific": "Solanum",
+          "chinese": "茄属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Solanum",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Solanum.html",
+          "sha256": "8be5c2d50de1138177952fbf58cff4f1e2b41e154b545f7871d348930a4562cb",
+          "status": "verified",
+          "sourceScientific": "Solanum",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1joNeehE3q/"
+    },
+    {
+      "id": "20250328-01",
+      "archiveId": "20250328-01",
+      "name": "白花油麻藤",
+      "scientificName": "Mucuna birdwoodiana Tutcher",
+      "acceptedScientificName": "Mucuna birdwoodiana Tutcher",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "禾雀花",
+        "血枫藤",
+        "鸡血藤"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Fabales",
+          "chinese": "豆目",
+          "status": "provided",
+          "displayText": "豆目 / Fabales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Fabaceae",
+          "chinese": "豆科",
+          "status": "provided",
+          "displayText": "豆科 / Fabaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Mucuna",
+          "chinese": "油麻藤属",
+          "status": "provided",
+          "displayText": "油麻藤属 / Mucuna"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Mucuna birdwoodiana",
+          "chinese": "白花油麻藤",
+          "status": "provided",
+          "displayText": "白花油麻藤 / Mucuna birdwoodiana"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:509150-1",
+        "record": "2373952",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-03-28",
+      "videoPublishedTime": "17:14:12",
+      "originalVideoTitles": [
+        "禾雀花是臭的，却可以拿来做菜吃？它的正式中文名是白花油麻藤"
+      ],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "chineseNameSources": [
+        {
+          "scientific": "Mucuna",
+          "chinese": "油麻藤属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Mucuna",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Mucuna.html",
+          "sha256": "21e4de5d33f3da6803b5f5a482a8f4828166b29ff5237e00bfb277c3b6f0a856",
+          "status": "verified",
+          "sourceScientific": "Mucuna",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV13YoXYnEtn/"
+    },
+    {
+      "id": "20250324-01",
+      "archiveId": "20250324-01",
+      "name": "秋英",
+      "scientificName": "Cosmos bipinnatus Cav.",
+      "acceptedScientificName": "Cosmos bipinnatus Cav.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "波斯菊",
+        "格桑花"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Asterales",
+          "chinese": "菊目",
+          "status": "provided",
+          "displayText": "菊目 / Asterales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Asteraceae",
+          "chinese": "菊科",
+          "status": "provided",
+          "displayText": "菊科 / Asteraceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Cosmos",
+          "chinese": "秋英属",
+          "status": "provided",
+          "displayText": "秋英属 / Cosmos"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Cosmos bipinnatus",
+          "chinese": "秋英",
+          "status": "provided",
+          "displayText": "秋英 / Cosmos bipinnatus"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:198320-1",
+        "record": "2926450",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-03-24",
+      "videoPublishedTime": "18:41:08",
+      "originalVideoTitles": [
+        "秋英也叫波斯菊，格桑花？春天盛开一大片也挺美丽的—植物手绘"
+      ],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "chineseNameSources": [
+        {
+          "scientific": "Cosmos",
+          "chinese": "秋英属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Cosmos",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Cosmos.html",
+          "sha256": "66ca7d28034487e4991989edb78fbc65eadeeb36cff1059bf5256863ee4d2fa6",
+          "status": "verified",
+          "sourceScientific": "Cosmos",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1zwoyYzEMG/"
+    },
+    {
+      "id": "20250115-01",
+      "archiveId": "20250115-01",
+      "name": "类芦",
+      "scientificName": "Neyraudia reynaudiana (Kunth) Keng ex Hitchc.",
+      "acceptedScientificName": "Neyraudia reynaudiana (Kunth) Keng ex Hitchc.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "篱笆竹",
+        "望冬草",
+        "石珍茅"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Poales",
+          "chinese": "禾本目",
+          "status": "provided",
+          "displayText": "禾本目 / Poales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Poaceae",
+          "chinese": "禾本科",
+          "status": "provided",
+          "displayText": "禾本科 / Poaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Neyraudia",
+          "chinese": "类芦属",
+          "status": "provided",
+          "displayText": "类芦属 / Neyraudia"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Neyraudia reynaudiana",
+          "chinese": "类芦",
+          "status": "provided",
+          "displayText": "类芦 / Neyraudia reynaudiana"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:409508-1",
+        "record": "425870",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-01-15",
+      "videoPublishedTime": "20:01:28",
+      "originalVideoTitles": [
+        "认识了比芦苇还温柔的类芦，植物手绘"
+      ],
+      "videoOtherVarieties": "芦苇",
+      "relatedPlants": [
+        {
+          "name": "芦苇",
+          "scientific": "",
+          "note": "同片提及或用于比较的对象，不另计主档案。",
+          "archiveId": ""
+        }
+      ],
+      "chineseNameSources": [
+        {
+          "scientific": "Neyraudia",
+          "chinese": "类芦属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Neyraudia",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Neyraudia.html",
+          "sha256": "74c261009dc2c08fb5aefc93da301c38a5107ff5fc4f6151df108d125f4d0e0b",
+          "status": "verified",
+          "sourceScientific": "Neyraudia",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1kjcBezEy3/"
+    },
+    {
+      "id": "20250127-01",
+      "archiveId": "20250127-01",
+      "name": "粉绿狐尾藻",
+      "scientificName": "Myriophyllum aquaticum (Vell.) Verdc.",
+      "acceptedScientificName": "Myriophyllum aquaticum (Vell.) Verdc.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "大聚藻"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Saxifragales",
+          "chinese": "虎耳草目",
+          "status": "provided",
+          "displayText": "虎耳草目 / Saxifragales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Haloragaceae",
+          "chinese": "小二仙草科",
+          "status": "provided",
+          "displayText": "小二仙草科 / Haloragaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Myriophyllum",
+          "chinese": "狐尾藻属",
+          "status": "provided",
+          "displayText": "狐尾藻属 / Myriophyllum"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Myriophyllum aquaticum",
+          "chinese": "粉绿狐尾藻",
+          "status": "provided",
+          "displayText": "粉绿狐尾藻 / Myriophyllum aquaticum"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:166319-2",
+        "record": "2366570",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-01-27",
+      "videoPublishedTime": "20:49:30",
+      "originalVideoTitles": [
+        "让人无法讨厌的入侵植物，粉绿狐尾藻，植物手绘"
+      ],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "chineseNameSources": [
+        {
+          "scientific": "Myriophyllum",
+          "chinese": "狐尾藻属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Myriophyllum",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Myriophyllum.html",
+          "sha256": "9e4d6a5589c131da37e3f4319626d9555d0598e6f1c25d305ba6b81627aa5ddc",
+          "status": "verified",
+          "sourceScientific": "Myriophyllum",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1WpfDYTEwp/"
+    },
+    {
+      "id": "20250225-01",
+      "archiveId": "20250225-01",
+      "name": "红花荷",
+      "scientificName": "Rhodoleia championii Hook.",
+      "acceptedScientificName": "Rhodoleia championii Hook.",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "红苞木"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Saxifragales",
+          "chinese": "虎耳草目",
+          "status": "provided",
+          "displayText": "虎耳草目 / Saxifragales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Hamamelidaceae",
+          "chinese": "金缕梅科",
+          "status": "provided",
+          "displayText": "金缕梅科 / Hamamelidaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Rhodoleia",
+          "chinese": "红花荷属",
+          "status": "provided",
+          "displayText": "红花荷属 / Rhodoleia"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Rhodoleia championii",
+          "chinese": "红花荷",
+          "status": "provided",
+          "displayText": "红花荷 / Rhodoleia championii"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:430745-1",
+        "record": "2428775",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-02-25",
+      "videoPublishedTime": "13:52:13",
+      "originalVideoTitles": [
+        "不是荷花？不是莲花？却把春天挂在枝头上了-红花荷"
+      ],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "chineseNameSources": [
+        {
+          "scientific": "Rhodoleia",
+          "chinese": "红花荷属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Rhodoleia",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Rhodoleia.html",
+          "sha256": "3e38b3b2ef1d75b710bb2454c4f1c676ade582bd534cf0373fe8eb2bf2c32ecb",
+          "status": "verified",
+          "sourceScientific": "Rhodoleia",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1bHPYekELA/"
+    },
+    {
+      "id": "20250304-01",
+      "archiveId": "20250304-01",
+      "name": "芸薹",
+      "scientificName": "Brassica rapa var. oleifera",
+      "acceptedScientificName": "Brassica rapa L.",
+      "rank": "variety",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "油菜花",
+        "白菜型油菜"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Brassicales",
+          "chinese": "十字花目",
+          "status": "provided",
+          "displayText": "十字花目 / Brassicales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Brassicaceae",
+          "chinese": "十字花科",
+          "status": "provided",
+          "displayText": "十字花科 / Brassicaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Brassica",
+          "chinese": "芸薹属",
+          "status": "provided",
+          "displayText": "芸薹属 / Brassica"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Brassica rapa",
+          "chinese": "芸薹",
+          "status": "provided",
+          "displayText": "芸薹 / Brassica rapa"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:279485-1",
+        "record": "2682652",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "本期采用芸薹油用变种名 Brassica rapa var. oleifera。POWO将该名称归入接受种 Brassica rapa，分类表保留接受种级；本期采用名及其异名记录另列。",
+      "videoPublishedDate": "2025-03-04",
+      "videoPublishedTime": "17:01:47",
+      "originalVideoTitles": [
+        "有一种春天叫油菜花，今年我终于拍到了油菜花,榨油小能手，也叫芸薹"
+      ],
+      "videoOtherVarieties": "甘蓝型油菜；芥菜型油菜",
+      "relatedPlants": [
+        {
+          "name": "甘蓝型油菜",
+          "scientific": "Brassica napus L.",
+          "note": "本期比较提及的油菜类别，不作为本档案主对象。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:279419-1",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        },
+        {
+          "name": "芥菜型油菜",
+          "scientific": "",
+          "note": "本期比较提及的油菜类别，不作为本档案主对象。",
+          "archiveId": ""
+        }
+      ],
+      "videoPrimaryName": "芸薹（油用变种）",
+      "chineseNameSources": [
+        {
+          "scientific": "Brassica",
+          "chinese": "芸薹属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Brassica",
+          "checked": "2026-10-11",
+          "status": "verified",
+          "sourceScientific": "Brassica"
+        }
+      ],
+      "nameSource": {
+        "provider": "POWO",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:3012970-4",
+        "checked": "2026-10-16",
+        "status": "synonym",
+        "scientificName": "Brassica rapa var. oleifera (DC.) Schltdl.",
+        "acceptedScientificName": "Brassica rapa L."
+      },
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1vH9nYoEiu/"
+    },
+    {
+      "id": "20250106-01",
+      "archiveId": "20250106-01",
+      "name": "银合欢",
+      "scientificName": "Leucaena leucocephala (Lam.) de Wit",
+      "acceptedScientificName": "Leucaena leucocephala (Lam.) de Wit",
+      "rank": "species",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Fabales",
+          "chinese": "豆目",
+          "status": "provided",
+          "displayText": "豆目 / Fabales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Fabaceae",
+          "chinese": "豆科",
+          "status": "provided",
+          "displayText": "豆科 / Fabaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Leucaena",
+          "chinese": "银合欢属",
+          "status": "provided",
+          "displayText": "银合欢属 / Leucaena"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "Leucaena leucocephala",
+          "chinese": "银合欢",
+          "status": "provided",
+          "displayText": "银合欢 / Leucaena leucocephala"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:138955-2",
+        "record": "2346347",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "2025-01-06",
+      "videoPublishedTime": "16:36:09",
+      "originalVideoTitles": [
+        "入侵植物系列 | 美丽又可爱的银合欢，是护坡先锋？是万能树？"
+      ],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "chineseNameSources": [
+        {
+          "scientific": "Leucaena",
+          "chinese": "银合欢属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Leucaena",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Leucaena.html",
+          "sha256": "97b853e8455d59ccc8bdfef57a00c891f94a6176dd50336fe913a9d9990c42da",
+          "status": "verified",
+          "sourceScientific": "Leucaena",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "video": "https://www.bilibili.com/video/BV1Mwr5YPEyt/"
+    },
+    {
+      "id": "20241223-01",
+      "archiveId": "20241223-01",
+      "name": "香蕉",
+      "scientificName": "Musa 'Hybrids'",
+      "acceptedScientificName": "",
+      "rank": "horticultural-hybrid",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "栽培香蕉"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "scientific": "Plantae",
+          "chinese": "植物界",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "scientific": "Streptophyta",
+          "chinese": "链型植物门",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "scientific": "Equisetopsida",
+          "chinese": "木贼纲",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "scientific": "Magnoliidae",
+          "chinese": "木兰亚纲",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "scientific": "Zingiberales",
+          "chinese": "姜目",
+          "status": "provided",
+          "displayText": "姜目 / Zingiberales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "scientific": "Musaceae",
+          "chinese": "芭蕉科",
+          "status": "provided",
+          "displayText": "芭蕉科 / Musaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "scientific": "Musa",
+          "chinese": "芭蕉属",
+          "status": "provided",
+          "displayText": "芭蕉属 / Musa"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "scientific": "",
+          "chinese": "",
+          "status": "not-applicable-horticultural",
+          "displayText": "园艺集合，不作独立种级分类"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327926-2",
+        "record": "254737",
+        "checked": "2026-10-16",
+        "sourceDataChecked": "2026-06-04",
+        "method": "official retained WCVP row; POWO reference page checked; upper ranks retain prior family evidence date"
+      },
+      "taxonomyNote": "Musa 'Hybrids' 是植物智采用的栽培与杂交香蕉集合称呼；本期记录香蕉，不将它指定为一个单一野生种或具体栽培品种。正式科属按POWO，园艺名称来源单列。",
+      "videoPublishedDate": "2024-12-23",
+      "videoPublishedTime": "20:52:46",
+      "originalVideoTitles": [
+        "是草不是树的香蕉，为什么还没有种子？芭蕉 | 植物科学画"
+      ],
+      "videoOtherVarieties": "野芭蕉；地涌金莲；朝天蕉；红蕉；大蕉；粉蕉；大麦客；巴西蕉",
+      "relatedPlants": [
+        {
+          "name": "野芭蕉",
+          "scientific": "",
+          "note": "同片对照称呼，未进一步确定其具体种名。",
+          "archiveId": ""
+        },
+        {
+          "name": "地涌金莲",
+          "scientific": "Musella lasiocarpa (Franch.) C.Y.Wu ex H.W.Li",
+          "note": "同片提及的对象，不另计主档案。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:585005-1",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        },
+        {
+          "name": "朝天蕉",
+          "scientific": "",
+          "note": "同片提及的对象，不另计主档案。",
+          "archiveId": ""
+        },
+        {
+          "name": "红蕉",
+          "scientific": "Musa coccinea Andrews",
+          "note": "同片提及的对象，不另计主档案。",
+          "archiveId": "",
+          "source": {
+            "provider": "邱园 POWO / WCVP",
+            "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:797554-1",
+            "sourceDataChecked": "2026-06-04",
+            "checked": "2026-10-16"
+          }
+        },
+        {
+          "name": "大蕉",
+          "scientific": "",
+          "note": "同片提及的栽培类别或品种称呼，未认定为本期镜头主对象。",
+          "archiveId": ""
+        },
+        {
+          "name": "粉蕉",
+          "scientific": "",
+          "note": "同片提及的栽培类别或品种称呼，未认定为本期镜头主对象。",
+          "archiveId": ""
+        },
+        {
+          "name": "大麦客",
+          "scientific": "",
+          "note": "同片提及的栽培类别或品种称呼，未认定为本期镜头主对象。",
+          "archiveId": ""
+        },
+        {
+          "name": "巴西蕉",
+          "scientific": "",
+          "note": "同片提及的栽培类别或品种称呼，未认定为本期镜头主对象。",
+          "archiveId": ""
+        }
+      ],
+      "videoPrimaryName": "香蕉",
+      "chineseNameSources": [
+        {
+          "scientific": "Musa",
+          "chinese": "芭蕉属",
+          "provider": "植物智 iPlant",
+          "url": "https://www.iplant.cn/info/Musa",
+          "checked": "2026-09-27",
+          "reviewed": "2026-10-02",
+          "evidenceFile": "data/chinese-name-sources/Musa.html",
+          "sha256": "5d15876d6f78a40c3ba10272da5836a0f38405603e3b8e4e68ad96b3eda8bae7",
+          "status": "verified",
+          "sourceScientific": "Musa",
+          "rank": "genus",
+          "reuseChecked": "2026-10-16"
+        }
+      ],
+      "horticulturalSource": {
+        "provider": "植物智 植物百科",
+        "url": "https://www.iplant.cn/bk/E7B156935635FADA",
+        "checked": "2026-10-16",
+        "name": "香蕉",
+        "scientificName": "Musa 'Hybrids'",
+        "scope": "多类栽培或杂交香蕉的集合称呼；不是单一具体栽培品种的确认"
+      },
+      "cultivarName": "",
+      "horticulturalName": "Musa 'Hybrids'",
+      "cultivarIdentityStatus": "horticultural-aggregate-not-single-cultivar",
+      "acceptedTaxonRank": "",
+      "video": "https://www.bilibili.com/video/BV1tpC5YiEPg/"
     }
   ]
 }
