@@ -1,4 +1,7 @@
 :root{background:white}
+html[lang=en] .species-list button,html[lang=en] .selection h3{min-width:0;overflow-wrap:anywhere}
+html[lang=en] .selection #selection-copy{min-width:0}
+html[lang=en] .settings select{max-width:160px}
 body{overflow-y:hidden}
 main{max-width:none;padding:0 0 12px}
 .workspace{box-shadow:none}

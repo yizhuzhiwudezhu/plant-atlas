@@ -45,9 +45,10 @@
     const seen=new Set();album=[...detail.querySelectorAll('[data-photo]')].filter(el=>{const key=identity(el.dataset.photo);if(seen.has(key))return false;seen.add(key);return true;}).map(el=>({src:el.dataset.photo,caption:el.dataset.caption||''}));
     if(!album.length)return;opener=button;savedScroll=window.scrollY;savedOverflow=document.body.style.overflow;savedPadding=document.body.style.paddingRight;
     const gap=window.innerWidth-document.documentElement.clientWidth;if(gap)document.body.style.paddingRight=(parseFloat(getComputedStyle(document.body).paddingRight)+gap)+'px';document.body.style.overflow='hidden';
-    viewer.querySelector('#viewer-title').textContent=`${detail.querySelector('h1')?.textContent||'物种'} · 图片浏览`;
+    const en=document.documentElement.lang==='en';
+    viewer.querySelector('#viewer-title').textContent=`${detail.querySelector('h1')?.textContent||''} · ${en?'Image gallery':'图片浏览'}`;
     thumbs.replaceChildren();album.forEach((item,i)=>{
-      const button=document.createElement('button');button.className='viewer-thumb';button.setAttribute('aria-label',`查看第 ${i+1} 张图片：${item.caption}`);
+      const button=document.createElement('button');button.className='viewer-thumb';button.setAttribute('aria-label',en?`Image ${i+1}: ${item.caption}`:`查看第 ${i+1} 张图片：${item.caption}`);
       const preview=document.createElement('img');preview.src=item.src;preview.alt='';preview.loading='lazy';
       const number=document.createElement('span');number.textContent=String(i+1).padStart(2,'0');button.append(preview,number);button.addEventListener('click',()=>show(i));thumbs.append(button);
     });

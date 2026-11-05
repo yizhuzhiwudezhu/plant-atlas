@@ -1,0 +1,15 @@
+.classification-compact .en-database-title{margin:0 0 8px;font:500 clamp(24px,3vw,36px) Georgia,serif}
+.en-taxonomy .en-chinese-rank{margin-inline-start:.55em;color:var(--muted);font-size:.9em}
+.en-taxonomy .taxonomy-leaf>small:not(.companion-hit){color:var(--muted)}
+.en-taxonomy .taxonomy-leaf .companion-hit{font-size:12px}
+.en-taxonomy .sort-line label{min-width:0}
+.en-taxonomy .sort-line select{max-width:100%}
+.en-taxonomy .database-actions{row-gap:8px}
+.en-taxonomy+.classification-source{margin-top:0}
+.en-taxonomy+.classification-source summary{cursor:pointer}
+@media(max-width:760px){
+ .en-taxonomy .sort-line{justify-content:flex-start;gap:6px 12px}
+ .en-taxonomy .database-actions a{white-space:nowrap}
+ .en-taxonomy .taxonomy-node>div{margin-inline-start:4px;padding-inline-start:5px}
+ .en-taxonomy .taxonomy-leaf,.en-taxonomy .taxonomy-node>summary{overflow-wrap:anywhere}
+}

@@ -85,7 +85,10 @@ function taxonomySection(p) {
 }
 
 function photoButton(src, alt, cls = '') {
-  return `<button class="photo-button ${cls}" data-photo="${esc(src)}" data-caption="${esc(alt)}" aria-label="放大：${esc(alt)}"><img src="${esc(src)}" alt="${esc(alt)}" loading="lazy"><span>查看大图 ↗</span></button>`;
+  const en=document.documentElement.lang==='en';
+  const size=en&&window.EnglishImageSizes?.[src];
+  const dims=size?` width="${Number(size[0])}" height="${Number(size[1])}"`:'';
+  return `<button class="photo-button ${cls}" data-photo="${esc(src)}" data-caption="${esc(alt)}" aria-label="${en?'Enlarge: ':'放大：'}${esc(alt)}"><img src="${esc(src)}" alt="${esc(alt)}"${dims} loading="lazy"><span>${en?'View image':'查看大图'} ↗</span></button>`;
 }
 const searchPlants=plants.map(p=>({...p,searchText:[p.name,p.scientificName,p.id,...(p.originalVideoTitles||[]),p.videoOtherVarieties,...taxonomyRows(p).flat(),...(p.aliases||[]),p.group,...(p.tags||[]),p.summary,...p.chapters.map(c=>c.heading)].join(' ')}));
 const homeTreeState=new Map();
@@ -262,9 +265,18 @@ function classificationPage() {
   main.querySelector('form').addEventListener('submit',e=>e.preventDefault());input.addEventListener('input',renderDatabase);
   main.querySelector('#expand-taxonomy').addEventListener('click',()=>main.querySelectorAll('.taxonomy-node').forEach(n=>n.open=true));main.querySelector('#collapse-taxonomy').addEventListener('click',()=>main.querySelectorAll('.taxonomy-node').forEach(n=>n.open=false));renderDatabase();
 }
-function statisticsPage() {
-  document.title = '访问数据统计 · 一株植物的株';
-  main.innerHTML = `<section class="statistics-page" aria-labelledby="statistics-title">
+function statisticsPage(en=false) {
+  document.title = en?'Visitor statistics · 一株植物的株':'访问数据统计 · 一株植物的株';
+  main.innerHTML = en ? `<section class="statistics-page" aria-labelledby="statistics-title">
+    <a class="statistics-back" href="#">← Species index</a>
+    <div class="statistics-heading"><div><p class="eyebrow">VISITOR STATISTICS</p><h1 id="statistics-title">What are people exploring?</h1></div>
+    <a class="statistics-open" href="https://cloud.umami.is/analytics/us/share/PVKBx7aokbYPgAo7?locale=en" target="_blank" rel="noopener noreferrer">Open dashboard ↗</a></div>
+    <p class="statistics-note">Explore visits, page views and trends in our public Umami dashboard. Choose a period in the dashboard to change the dates.</p>
+    <div class="statistics-tabs" role="group" aria-label="Statistics category"><button type="button" data-statistics="overview" aria-pressed="true">Overview</button><button type="button" data-statistics="species" aria-pressed="false">Species views</button><button type="button" data-statistics="graphs" aria-pressed="false">Chart selections</button><button type="button" data-statistics="videos" aria-pressed="false">Video clicks</button><button type="button" data-statistics="defaults" aria-pressed="false">Default chart opens</button></div>
+    <iframe class="statistics-frame" src="https://cloud.umami.is/analytics/us/share/PVKBx7aokbYPgAo7?locale=en" title="Public visitor statistics" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    <p class="statistics-note">If the dashboard does not appear, use the link above to open it separately. Local previews are excluded.</p>
+    <details class="statistics-guide"><summary>How to read the rankings</summary><p>Species views count visits to a record. Moving between sections of the same record counts once. Chart selections count charts a visitor chooses; the chart that opens by default is counted separately. Video clicks count visits to the video link. Playback and QR scans are not measured here.</p><p>Species and chart event names use the original Chinese labels across both editions.</p></details>
+    <details class="statistics-guide"><summary>Dashboard terms</summary><p>Visitors (访客), Visits (访问次数), Views (浏览量), Bounce rate (跳出率) and Visit duration (访问时长).</p></details></section>` : `<section class="statistics-page" aria-labelledby="statistics-title">
     <a class="statistics-back" href="#">← 返回首页</a>
     <div class="statistics-heading"><div><p class="eyebrow">VISITS / 访问数据统计</p><h1 id="statistics-title">看看大家的足迹</h1></div><a class="statistics-open" href="https://cloud.umami.is/analytics/us/share/PVKBx7aokbYPgAo7?locale=zh-CN" target="_blank" rel="noopener noreferrer">单独打开统计面板 ↗</a></div>
     <p class="statistics-note">访客数、浏览量与访问趋势，由 Umami 提供。面板默认使用简体中文，可在面板中选择统计时间。</p>
@@ -274,22 +286,23 @@ function statisticsPage() {
     <details class="statistics-guide"><summary>怎么看内容排行？</summary><p>上方按钮已按事件名称筛选：<strong>物种浏览｜</strong>看物种人气，<strong>图谱切换｜</strong>看主动选择的图谱，<strong>视频点击｜</strong>看视频入口点击。名称后直接显示中文物种名或图谱名。</p><p><strong>图谱默认｜</strong>单独记录默认打开的图谱，不与主动选择混算。同一物种内切换栏目不重复计入物种浏览；离开后再次进入或刷新会计为新一次浏览。视频点击不等于实际播放，外部扫码不计入。</p></details>
     <details class="statistics-guide"><summary>统计名词中英文对照</summary><p>访客（Visitors） · 访问次数（Visits） · 浏览量（Views） · 跳出率（Bounce rate） · 平均访问时长（Visit duration）</p><p>事件 / 行为类别（Events） · 筛选器（Filter） · 网页（Pages） · 来源（Sources） · 浏览器（Browsers） · 设备（Devices） · 位置（Location）</p><p>备注（Notes，部分面板显示为 label.notes）</p></details>
   </section>`;
-  const share = 'https://cloud.umami.is/analytics/us/share/PVKBx7aokbYPgAo7?locale=zh-CN';
+  const locale=en?'en':'zh-CN';
+  const share = 'https://cloud.umami.is/analytics/us/share/PVKBx7aokbYPgAo7?locale='+locale;
   const eventShare = 'https://cloud.umami.is/analytics/us/share/PVKBx7aokbYPgAo7/events';
   const prefixes = {species:'物种浏览｜',graphs:'图谱切换｜',videos:'视频点击｜',defaults:'图谱默认｜'};
   main.querySelectorAll('[data-statistics]').forEach(button => button.addEventListener('click',()=>{
     if (button.getAttribute('aria-pressed') === 'true') return;
     const key = button.dataset.statistics;
-    const url = key === 'overview' ? share : eventShare+'?locale=zh-CN&event='+encodeURIComponent('c.'+prefixes[key]);
+    const url = key === 'overview' ? share : eventShare+'?locale='+locale+'&event='+encodeURIComponent('c.'+prefixes[key]);
     main.querySelector('.statistics-frame').src = url;
-    main.querySelector('.statistics-frame').title = '公开访问统计 · '+button.textContent;
+    main.querySelector('.statistics-frame').title = (en?'Public statistics · ':'公开访问统计 · ')+button.textContent;
     main.querySelector('.statistics-open').href = url;
     main.querySelectorAll('[data-statistics]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
   }));
 }
-function atlasPage() {
-  document.title = '图谱 · 一株植物的株';
-  main.innerHTML = '<iframe id="atlas-frame" class="atlas-frame" src="atlas/index.html" title="物种分类图谱与碰撞漫游" allow="fullscreen" allowfullscreen></iframe>';
+function atlasPage(en=false) {
+  document.title = en?'Interactive atlas · 一株植物的株':'图谱 · 一株植物的株';
+  main.innerHTML = `<iframe id="atlas-frame" class="atlas-frame" src="atlas/index.html${en?'?lang=en':''}" title="${en?'Interactive species atlas':'物种分类图谱与碰撞漫游'}" allow="fullscreen" allowfullscreen></iframe>`;
 }
 window.addEventListener('message', event => {
   const frame = document.getElementById('atlas-frame');
@@ -300,24 +313,42 @@ window.addEventListener('message', event => {
 let currentId;
 function route() {
   rememberHomeTree();
+  const en=FieldLanguages.updateShell();
   if (location.hash === '#main') { main.focus({preventScroll:true}); return; }
   const parts = location.hash.slice(1).split('/');
+  if(en&&!['statistics','atlas'].includes(parts[0])&&!FieldLanguages.ready(main,route))return;
   if (parts[0] !== 'plant') window.AtlasAnalytics?.leaveSpecies();
   document.querySelector('.nav-index').classList.toggle('current',!['classification','atlas','statistics'].includes(parts[0]));
   document.querySelector('.nav-classification').classList.toggle('current',parts[0] === 'classification');
   document.querySelector('.nav-atlas').classList.toggle('current',parts[0] === 'atlas');
   document.body.classList.toggle('atlas-page',parts[0] === 'atlas');
-  if (parts[0] === 'statistics') { currentId = null; statisticsPage(); window.scrollTo(0,0); main.focus({preventScroll:true}); return; }
-  if (parts[0] === 'atlas') { currentId = null; atlasPage(); window.scrollTo(0,0); return; }
-  if (parts[0] === 'classification') { currentId = null; classificationPage(); window.scrollTo(0,0); return; }
+  if (['statistics','atlas','classification'].includes(parts[0])) {
+    currentId=null;
+    if(parts[0]==='statistics')statisticsPage(en);
+    else if(parts[0]==='atlas')atlasPage(en);
+    else if(en&&window.EnglishClassification)window.EnglishClassification.render(main,plants);
+    else classificationPage();
+    window.scrollTo(0,0);
+    if(parts[0]==='statistics')main.focus({preventScroll:true});
+    return;
+  }
   if (parts[0] === 'plant') {
     let id; try { id = decodeURIComponent(parts[1] || ''); } catch { id = ''; }
     const canonical=window.LIBRARY.legacyAliases?.[id];
     if(canonical){location.replace('#plant/'+encodeURIComponent(canonical)+(parts[2]?'/'+parts[2]:''));return;}
-    if (currentId !== id) { detailPage(id); currentId = id; window.scrollTo(0,0); main.focus({preventScroll:true}); }
+    if (currentId !== id) {
+      if(en)FieldLanguages.detail(main,plants.find(p=>p.id===id)); else detailPage(id);
+      currentId=id;
+      window.scrollTo(0,0);
+      main.focus({preventScroll:true});
+    }
     window.AtlasAnalytics?.species(id);
     if (parts[2]) document.getElementById(parts[2])?.scrollIntoView({behavior:'smooth'});
-  } else { currentId = null; indexPage(); window.scrollTo(0,0); }
+  } else {
+    currentId=null;
+    if(en)FieldLanguages.index(main,plants); else indexPage();
+    window.scrollTo(0,0);
+  }
 }
 document.addEventListener('keydown', e => { if (e.key === '/' && !['INPUT','TEXTAREA'].includes(document.activeElement.tagName) && document.querySelector('#search')) { e.preventDefault(); document.querySelector('#search').focus(); } });
 window.addEventListener('hashchange', route);
@@ -325,6 +356,6 @@ route();
 if (['127.0.0.1', 'localhost', '[::1]'].includes(location.hostname)) {
   const editorLink = document.createElement('a');
   editorLink.href = '/editor';
-  editorLink.textContent = '本地编辑 ↗';
+  editorLink.textContent = document.documentElement.lang==='en'?'Local editor (中文) ↗':'本地编辑 ↗';
   (document.querySelector('.footer-links') || document.querySelector('footer')).append(editorLink);
 }

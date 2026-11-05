@@ -1,9 +1,9 @@
 (function(global){
  'use strict';
  const api={
-  contextTree(root,focus,map,depth,collapsed,folding,sort,hiddenThrough=-1){
+  contextTree(root,focus,map,depth,collapsed,folding,sort,hiddenThrough=-1,compareNames){
    const ancestors=new Set();let p=focus;while(p){ancestors.add(p.id);p=p.parent?map.get(p.parent):null;}
-   const compare=sort==='name'?(a,b)=>a.chinese.localeCompare(b.chinese,'zh-CN'):(a,b)=>b.count-a.count||a.scientific.localeCompare(b.scientific);
+   const compare=sort==='name'?(compareNames||((a,b)=>a.chinese.localeCompare(b.chinese,'zh-CN'))):(a,b)=>b.count-a.count||a.scientific.localeCompare(b.scientific);
    function visit(n,inside){
     inside=inside||n.id===focus.id;
     const onPath=ancestors.has(n.id),stub=!inside&&!onPath;
