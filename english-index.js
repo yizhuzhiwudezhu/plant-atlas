@@ -118,8 +118,7 @@
         ${p.drawings?.length ? '<span class="drawing-label">Sketches</span>' : ''}</div>
         <div class="card-body">${companions.map(o=>`<small class="companion-hit">Also featured in this video: ${[...new Set([o.english,o.scientific,o.name].filter(Boolean))].map(hit).join(' · ')}</small>`).join('')}
         <p class="card-family">${hit(classification)}</p><h3>${hit(title)}<span aria-hidden="true">↗</span></h3>
-          ${!title.includes(p.name) ? `<p class="en-original-name" lang="zh-CN">${hit(p.name)}</p>` : ''}
-          ${title !== p.scientificName ? `<p class="latin">${hit(p.scientificName)}</p>` : ''}
+          <p class="en-original-name" lang="zh-CN">${hit(p.name)}</p>
           ${summary && summary !== p.summary ? `<p class="card-description">${hit(summary)}</p>` : ''}
           ${samples.length<plants.length?`<small class="en-note-status">${hasTranslation(p.id) ? 'Field notes in English' : 'Field notes in Chinese'}</small>`:''}</div></a>`;
     }

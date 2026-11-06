@@ -9,9 +9,13 @@
 .en-featured a{display:inline-block;margin-right:18px}
 .en-note-status,.en-original-name{color:var(--muted);line-height:1.55}
 .en-note-status{display:block;margin-top:7px;font-size:12px}
-.en-original-name{margin:5px 0;font-size:14px}
+.en-original-name{margin:5px 0;font-size:13px;font-style:normal}
 .en-catalog .plant-card h3,.en-detail h1,.en-detail dd{overflow-wrap:anywhere}
-.en-detail h1 small{display:inline-block;white-space:nowrap;font-size:.62em;color:var(--muted)}
+/* Compact scientific titles keep complete names and wrap only when needed. */
+.en-catalog .plant-card h3{display:block;position:relative;padding-right:22px;font:400 18px/1.4 Georgia,"Times New Roman",serif;letter-spacing:0;word-break:normal;overflow-wrap:break-word}
+.en-catalog .plant-card h3>span[aria-hidden]{position:absolute;right:0;top:.1em;font-size:16px;line-height:1.4}
+.en-detail .detail-heading h1{font:400 clamp(22px,2.1vw,28px)/1.35 Georgia,"Times New Roman",serif;letter-spacing:0;word-break:normal;overflow-wrap:break-word;margin-bottom:7px}
+.en-detail .detail-heading>.en-original-name{padding-right:126px;min-height:44px;margin:0;font-size:14px;line-height:1.6}
 .en-index-controls{gap:16px;flex-wrap:wrap}
 .en-result-count{margin-left:10px;color:var(--muted);font-size:13px}
 .language-notice{padding:12px 16px;background:var(--paper);color:var(--ink);line-height:1.7;border-left:2px solid var(--line)}
@@ -35,8 +39,11 @@ html[lang="en"] .topbar .brand{letter-spacing:0}
   .topbar .brand small{letter-spacing:1px}
   .en-detail .detail-nav a{white-space:normal}
   .en-detail .heading-top>div:first-child{min-width:0}
+  .en-detail .detail-heading h1{font-size:24px}
+  .en-detail .detail-heading>.en-original-name{padding-right:116px;min-height:48px}
   .en-catalog .toolbar{row-gap:8px}
 }
+@media(max-width:700px){.en-catalog .mobile-double .plant-card h3{font-size:16px;line-height:1.4;padding-right:18px}.en-catalog .mobile-double .plant-card h3>span[aria-hidden]{font-size:13px}.en-catalog .mobile-double .en-original-name{font-size:12px}}
 .en-home-workspace .en-catalog{padding-block:0}
 .en-home-workspace .en-featured{font-size:13px;margin-bottom:14px}
 .en-home-workspace .en-chinese-rank{margin-inline-start:.5em;color:var(--muted);font-size:.9em}

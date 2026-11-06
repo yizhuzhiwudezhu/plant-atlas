@@ -49,7 +49,7 @@ window.FieldLanguages = (() => {
     return false;
   }
   const hasTranslation=id=>complete.has(id);
-  const titleFor=p=>featured.has(p.id)&&hasTranslation(p.id)?translate(p.id,p.name):p.scientificName||p.name;
+  const titleFor=p=>p.scientificName||p.name;
   const http=value=>/^https?:\/\//i.test(value||'');
   function anchor(url,label,attributes='') {
     return http(url)?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer" ${attributes}>${esc(label)} ↗</a>`:esc(label);
@@ -131,9 +131,6 @@ window.FieldLanguages = (() => {
   function detail(main,p) {
     if(!p){document.title='Record not found';main.innerHTML='<div class="empty"><h1>Record not found</h1><a href="#">Return to the index</a></div>';return;}
     const full=hasTranslation(p.id),t=(s,path)=>translate(p.id,s,path),title=titleFor(p);
-    const suffix=' ('+p.name+')';
-    const heading=full&&title.endsWith(suffix)
-      ? esc(title.slice(0,-suffix.length))+' <small lang="zh-CN">('+esc(p.name)+')</small>' : esc(title);
     const paragraphs=(s,path)=>String(t(s,path)||'').split(/\n+/).filter(Boolean).map(x=>'<p>'+esc(x)+'</p>').join('');
     const figure=(src,caption)=>`<figure>${photoButton(src,caption)}<figcaption>${esc(caption)}</figcaption></figure>`;
     const used=new Set([p.cover,...p.chapters.map(c=>c.image)]);
@@ -148,9 +145,9 @@ window.FieldLanguages = (() => {
     main.innerHTML=`<div class="detail en-detail"><a class="back" href="#">← Species index</a>
       <p class="breadcrumb">${(p.ranks||[]).map(r=>r.scientific).filter(Boolean).map(esc).join(' › ')}</p>
       <section class="detail-hero"><div class="detail-cover">${p.cover?photoButton(p.cover,full?t(p.coverCaption,'coverCaption')||title:title):''}</div><div class="detail-heading">
-      <div class="heading-top"><div><p class="eyebrow">SPECIES RECORD · ${esc(p.id)}</p><h1>${heading}</h1></div>
+      <div class="heading-top"><div><p class="eyebrow">SPECIES RECORD · ${esc(p.id)}</p><h1>${esc(title)}</h1></div>
       ${p.video?`<div class="video-access"><a class="video-qr" data-video-archive="${esc(p.id)}" data-video-position="二维码链接" href="${esc(p.video)}" target="_blank" rel="noopener noreferrer"><img src="assets/${esc(p.id)}/video-qr.png" alt="QR code for the video"></a><a class="video-link" ${videoLinkAttrs} href="${esc(p.video)}" target="_blank" rel="noopener noreferrer">▷ Watch video ↗</a></div>`:''}</div>
-      ${title!==p.scientificName?`<p class="scientific">${esc(p.scientificName)}</p>`:`<p class="scientific" lang="zh-CN">${esc(p.name)}</p>`}
+      <p class="en-original-name" lang="zh-CN">${esc(p.name)}</p>
       <p class="class-group">${esc(groups[p.group]||p.group)}</p>${full?`<p class="detail-summary">${esc(t(p.summary,'summary'))}</p>`:''}
       <dl>${[['Order',p.orderLatin],['Family',p.familyLatin],['Genus',p.genusLatin],['Video date',p.videoPublishedDate]].filter(x=>x[1]).map(([a,b])=>`<div><dt>${a}</dt><dd>${esc(b)}</dd></div>`).join('')}
       ${full&&p.aliases?.some(a=>a!==p.name&&a!==p.speciesLatin&&a!==p.scientificName)?`<div><dt>Other names in the source</dt><dd>${p.aliases.filter(a=>a!==p.name&&a!==p.speciesLatin&&a!==p.scientificName).map(a=>esc(featured.has(p.id)?t(a):a)).join(', ')}</dd></div>`:''}</dl></div></section>
