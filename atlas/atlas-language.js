@@ -1,7 +1,7 @@
 /* Interface wording for the atlas. Scientific names and record identifiers come from the shared dataset. */
 (() => {
   'use strict';
-  const en=new URLSearchParams(location.search).get('lang')==='en';
+  const en=window.FieldLanguagePreference.current==='en';
   const text={
     '图谱 · 一株植物的株':'Species atlas · 一株植物的株',
     '查找物种或分类':'Search species or taxa',

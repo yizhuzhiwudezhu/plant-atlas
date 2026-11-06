@@ -302,7 +302,7 @@ function statisticsPage(en=false) {
 }
 function atlasPage(en=false) {
   document.title = en?'Interactive atlas · 一株植物的株':'图谱 · 一株植物的株';
-  main.innerHTML = `<iframe id="atlas-frame" class="atlas-frame" src="atlas/index.html${en?'?lang=en':''}" title="${en?'Interactive species atlas':'物种分类图谱与碰撞漫游'}" allow="fullscreen" allowfullscreen></iframe>`;
+  main.innerHTML = `<iframe id="atlas-frame" class="atlas-frame" src="atlas/index.html?lang=${en?'en':'zh'}" title="${en?'Interactive species atlas':'物种分类图谱与碰撞漫游'}" allow="fullscreen" allowfullscreen></iframe>`;
 }
 window.addEventListener('message', event => {
   const frame = document.getElementById('atlas-frame');

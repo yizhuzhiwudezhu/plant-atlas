@@ -28,9 +28,9 @@
     const searchText = new Map(ordered.map(p => {
       const fields = [records.get(p.id).search,titleFor(p),p.summary,...(p.tags || [])];
       if (hasTranslation(p.id)) {
-        fields.push(translate(p.id, p.summary));
-        for (const chapter of p.chapters || []) {
-          fields.push(translate(p.id, chapter.heading), translate(p.id, chapter.text));
+        fields.push(translate(p.id, p.summary, 'summary'));
+        for (const [i,chapter] of (p.chapters || []).entries()) {
+          fields.push(translate(p.id, chapter.heading, 'chapters.'+i+'.heading'), translate(p.id, chapter.text, 'chapters.'+i+'.text'));
         }
       }
       return [p.id, normalized(fields.join(' '))];
@@ -110,7 +110,7 @@
     const hit=value=>taxonomy.marked(value,words);
     function card(p) {
       const title = titleFor(p);
-      const summary = hasTranslation(p.id) ? translate(p.id, p.summary) : '';
+      const summary = hasTranslation(p.id) ? translate(p.id, p.summary, 'summary') : '';
       const classification = [p.orderLatin, p.familyLatin, p.genusLatin].filter(Boolean).join(' / ');
       const companions=words.length?records.get(p.id).related.filter(o=>words.some(w=>normalized([o.name,o.english,o.scientific].join(' ')).includes(w))):[];
       return `<a class="plant-card" href="${href(p)}"><div class="card-image"><img src="${escape(p.cover)}" alt="${escape(p.scientificName || p.name)}" loading="lazy">
