@@ -1,6 +1,6 @@
 {
-  "version": "5.2",
-  "total": 174,
+  "version": "6.0",
+  "total": 176,
   "countUnit": "视频主对象档案",
   "taxa": [
     {
@@ -21115,6 +21115,230 @@
       "acceptedTaxonRank": "species",
       "additionalRanks": [],
       "video": "https://www.bilibili.com/video/BV1ooFVzDEmX/"
+    },
+    {
+      "id": "nymphaea-field-notes",
+      "archiveId": "nymphaea-field-notes",
+      "name": "睡莲属",
+      "scientificName": "Nymphaea L.",
+      "acceptedScientificName": "Nymphaea L.",
+      "rank": "genus",
+      "group": "被子植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "睡莲",
+        "Nymphaea"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "chinese": "植物界",
+          "scientific": "Plantae",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "chinese": "链型植物门",
+          "scientific": "Streptophyta",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "chinese": "木贼纲",
+          "scientific": "Equisetopsida",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "chinese": "木兰亚纲",
+          "scientific": "Magnoliidae",
+          "status": "provided",
+          "displayText": "木兰亚纲 / Magnoliidae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "chinese": "睡莲目",
+          "scientific": "Nymphaeales",
+          "status": "provided",
+          "displayText": "睡莲目 / Nymphaeales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "chinese": "睡莲科",
+          "scientific": "Nymphaeaceae",
+          "status": "provided",
+          "displayText": "睡莲科 / Nymphaeaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "chinese": "睡莲属",
+          "scientific": "Nymphaea",
+          "status": "provided",
+          "displayText": "睡莲属 / Nymphaea"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "chinese": "",
+          "scientific": "",
+          "status": "not-applicable-genus",
+          "displayText": "不适用（观察至属）"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:330032-2",
+        "record": "2377671",
+        "checked": "2026-11-11",
+        "sourceDataChecked": "2026-06-04"
+      },
+      "taxonomyNote": "本期观察池中多种睡莲，文稿记为睡莲属。花色不同的植株未逐一鉴定到种。",
+      "videoPublishedDate": "",
+      "videoPublishedTime": "",
+      "originalVideoTitles": [],
+      "videoOtherVarieties": "红色闪耀睡莲 Nymphaea 'Red Flare'；荷花 Nelumbo nucifera",
+      "relatedPlants": [
+        {
+          "name": "红色闪耀睡莲",
+          "scientific": "Nymphaea 'Red Flare'",
+          "note": "文稿举例的夜间开花品种。"
+        },
+        {
+          "name": "荷花",
+          "scientific": "Nelumbo nucifera",
+          "note": "文稿用荷花的整圆叶片和莲蓬来对照睡莲。"
+        }
+      ],
+      "videoPrimaryName": "睡莲属",
+      "chineseNameSources": [
+        {
+          "scientific": "Nymphaea",
+          "chinese": "睡莲属",
+          "provider": "植物智 iPlant",
+          "checked": "2026-11-11",
+          "url": "https://www.iplant.cn/info/Nymphaea",
+          "status": "verified"
+        }
+      ],
+      "acceptedTaxonRank": "genus",
+      "additionalRanks": [],
+      "video": ""
+    },
+    {
+      "id": "adiantum-flabellulatum",
+      "archiveId": "adiantum-flabellulatum",
+      "name": "扇叶铁线蕨",
+      "scientificName": "Adiantum flabellulatum L.",
+      "acceptedScientificName": "Adiantum flabellulatum L.",
+      "rank": "species",
+      "group": "蕨类植物",
+      "recordKind": "material-prepared",
+      "aliases": [
+        "Adiantum flabellulatum"
+      ],
+      "ranks": [
+        {
+          "rank": "kingdom",
+          "label": "界",
+          "chinese": "植物界",
+          "scientific": "Plantae",
+          "status": "provided",
+          "displayText": "植物界 / Plantae"
+        },
+        {
+          "rank": "phylum",
+          "label": "门",
+          "chinese": "链型植物门",
+          "scientific": "Streptophyta",
+          "status": "provided",
+          "displayText": "链型植物门 / Streptophyta"
+        },
+        {
+          "rank": "class",
+          "label": "纲",
+          "chinese": "木贼纲",
+          "scientific": "Equisetopsida",
+          "status": "provided",
+          "displayText": "木贼纲 / Equisetopsida"
+        },
+        {
+          "rank": "subclass",
+          "label": "亚纲",
+          "chinese": "水龙骨亚纲",
+          "scientific": "Polypodiinae",
+          "status": "provided",
+          "displayText": "水龙骨亚纲 / Polypodiinae"
+        },
+        {
+          "rank": "order",
+          "label": "目",
+          "chinese": "水龙骨目",
+          "scientific": "Polypodiales",
+          "status": "provided",
+          "displayText": "水龙骨目 / Polypodiales"
+        },
+        {
+          "rank": "family",
+          "label": "科",
+          "chinese": "凤尾蕨科",
+          "scientific": "Pteridaceae",
+          "status": "provided",
+          "displayText": "凤尾蕨科 / Pteridaceae"
+        },
+        {
+          "rank": "genus",
+          "label": "属",
+          "chinese": "铁线蕨属",
+          "scientific": "Adiantum",
+          "status": "provided",
+          "displayText": "铁线蕨属 / Adiantum"
+        },
+        {
+          "rank": "species",
+          "label": "种",
+          "chinese": "扇叶铁线蕨",
+          "scientific": "Adiantum flabellulatum",
+          "status": "provided",
+          "displayText": "扇叶铁线蕨 / Adiantum flabellulatum"
+        }
+      ],
+      "source": {
+        "provider": "POWO / WCVP",
+        "url": "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325040-2",
+        "record": "3144932",
+        "checked": "2026-11-11",
+        "sourceDataChecked": "2026-06-04"
+      },
+      "taxonomyNote": "",
+      "videoPublishedDate": "",
+      "videoPublishedTime": "",
+      "originalVideoTitles": [],
+      "videoOtherVarieties": "",
+      "relatedPlants": [],
+      "videoPrimaryName": "扇叶铁线蕨",
+      "chineseNameSources": [
+        {
+          "scientific": "Adiantum flabellulatum",
+          "chinese": "扇叶铁线蕨",
+          "provider": "植物智 iPlant",
+          "checked": "2026-11-11",
+          "url": "https://www.iplant.cn/info/Adiantum%20flabellulatum",
+          "status": "verified"
+        }
+      ],
+      "acceptedTaxonRank": "species",
+      "additionalRanks": [],
+      "video": ""
     }
   ]
 }

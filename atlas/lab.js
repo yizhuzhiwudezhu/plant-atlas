@@ -26,7 +26,7 @@
   bindControls();updateSearch();render(true);$('#loading').hidden=true;window.AtlasAnalytics?.graph(state.view,'default');
   let resizeTimer;new ResizeObserver(()=>{clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>render(true),120);}).observe($('#stage'));
   document.addEventListener('visibilitychange',()=>{if(state.view!=='game')return;if(document.hidden){gamePointer.active=false;activeSimulation?.stop();}else if(!gamePaused)activeSimulation?.alpha(.3).alphaTarget(.3).restart();});
- }catch(error){$('#loading').textContent=en?'Unable to load the atlas. '+error.message+' Open the local preview using the 5.1 launcher.':'加载失败：'+error.message+'。请通过“打开5.1版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
+ }catch(error){$('#loading').textContent=en?'Unable to load the atlas. '+error.message+' Open the local preview using the 6.0 launcher.':'加载失败：'+error.message+'。请通过“打开6.0版.cmd”启动，不要直接双击HTML文件。';console.error(error);}
 
  function localName(n){
   if(!en)return n.chinese;
@@ -52,7 +52,7 @@
   return tree;
  }
  function updateSearch(){
-  const a=map.get(state.selected),j=$('#open-archive');j.hidden=!(a?.rank==='species');if(!j.hidden)j.href=archiveURL(a.speciesIds[0]);
+  const a=map.get(state.selected),j=$('#open-archive');j.hidden=!(a?.isArchive);if(!j.hidden)j.href=archiveURL(a.speciesIds[0]);
   const terms=state.query.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);
   matched=new Set(taxa.filter(t=>(state.kind==='all'||t.recordKind===state.kind)&&terms.every(term=>[t.name,t.scientificName,t.group,en?window.AtlasLocale.t(t.group):t.group,...(t.aliases||[]),...t.ranks.flatMap(r=>[r.chinese,r.scientific])].join(' ').toLocaleLowerCase().includes(term))).map(t=>t.id));
   $('#result-count').textContent=(en?`${matched.size} of ${taxa.length} records`:`匹配 ${matched.size} 种 / 全库 ${taxa.length} 种`);
@@ -61,16 +61,20 @@
   $('#species-list').innerHTML=taxa.filter(t=>matched.has(t.id)).sort((a,b)=>(en?a.scientificName.localeCompare(b.scientificName,'en'):a.name.localeCompare(b.name,'zh-Hans-CN-u-co-pinyin',{numeric:true}))||a.id.localeCompare(b.id)).map(t=>`<button data-species="${escape(t.id)}" class="${state.selected===speciesNode(t.id)?.id?'selected':''}"><span>${escape(en?t.scientificName:t.name)}</span><small>${escape(en?t.name:t.scientificName)}</small></button>`).join('')||`<p class="small-note">${t('没有匹配的物种。')}</p>`;
   $('#species-list').querySelectorAll('button').forEach(b=>b.onclick=()=>{const n=speciesNode(b.dataset.species);if(!isInsideScope(n))state.scope='life';state.depth=7;$('#depth').value='7';for(const p of lineage(n))state.collapsed.delete(p.id);selectNode(n);render(true);});
  }
- function speciesNode(id){return [...map.values()].find(n=>n.rank==='species'&&n.speciesIds.includes(id));}
+ function speciesNode(id){return [...map.values()].find(n=>n.isArchive&&n.speciesIds.includes(id));}
  function isInsideScope(n){return lineage(n).some(p=>p.id===state.scope);}
- function selectNode(n){state.selected=n.id;if(state.view==='game'&&n.rank==='species')gameOpenedId=n.speciesIds[0];updateSelection();refreshHighlight();updateSearch();if(state.view==='game')updateGame();}
+ function selectNode(n){state.selected=n.id;if(state.view==='game'&&n.isArchive)gameOpenedId=n.speciesIds[0];updateSelection();refreshHighlight();updateSearch();if(state.view==='game')updateGame();}
  function refreshHighlight(){layer.selectAll('.graph-node').attr('class',d=>className(d.data||d));layer.selectAll('.graph-link').attr('class',d=>linkClass(d.target.data||d.target));scheduleLabels();}
+ function displayRank(node) {
+  if (node.isArchive && node.rank === 'genus') return en ? 'Genus record' : '属级观察';
+  return rankLabels[node.depth] || (en ? 'All records' : '全库');
+ }
  function englishSelection(n,species,matchCount) {
   const heading=escape(localName(n));
-  const kind=species?'Species record':n.id==='life'?'Full collection':'Taxon';
-  const rank=rankLabels[n.depth]||'All records';
+  const kind=species?'Field notes':n.id==='life'?'Full collection':'Taxon';
+  const rank=displayRank(n);
   const path=lineage(n).filter(p=>p.depth>=0).map(p=>
-   `<span>${rankLabels[p.depth]} · <i>${escape(localName(p))}</i></span>`).join('');
+   `<span>${displayRank(p)} · <i>${escape(localName(p))}</i></span>`).join('');
   let html=`<p class="eyebrow">${rank} / ${kind}</p><h3>${heading}</h3>
    <p class="scientific" lang="zh-CN">${escape(n.chinese)}</p>
    <p>${n.count} ${n.count===1?'record':'records'}${state.query||state.kind!=='all'?` · ${matchCount} matching`:''}</p>
@@ -89,12 +93,12 @@
   return html;
  }
  function updateSelection(){
-  const chosen=map.get(state.selected);const archive=chosen?.rank==='species'?taxa.find(t=>t.id===chosen.speciesIds[0]):null;const jump=$('#open-archive');jump.hidden=!archive;if(archive)jump.href=archiveURL(archive.id);else jump.removeAttribute('href');
+  const chosen=map.get(state.selected);const archive=chosen?.isArchive?taxa.find(t=>t.id===chosen.speciesIds[0]):null;const jump=$('#open-archive');jump.hidden=!archive;if(archive)jump.href=archiveURL(archive.id);else jump.removeAttribute('href');
   const n=map.get(state.selected);if(!n){$('#focus').disabled=true;$('#toggle-branch').hidden=true;$('#selection-copy').innerHTML=en?`<p class="eyebrow">${state.query||state.kind!=='all'?matched.size+' matching records':'Choose a node'}</p><h3>Follow a name along its branch</h3><p>Select a node or a name in the list to see its classification, count and sources.</p>`:'<p class="eyebrow">'+(state.query||state.kind!=='all'?'当前匹配 '+matched.size+' 个物种':'选择一个节点')+'</p><h3>从一个名字，走进它的分支。</h3><p>点击图中节点或左侧物种，查看中英文分类、数量与来源。</p>';return;}
-  const species=n.rank==='species'?taxa.find(t=>t.id===n.speciesIds[0]):null;
+  const species=n.isArchive?taxa.find(t=>t.id===n.speciesIds[0]):null;
   if(state.view==='game'&&species?.id===gameChosenId&&gameOpenedId!==species.id){$('#focus').disabled=true;$('#toggle-branch').hidden=true;$('#selection-copy').innerHTML=en?'<p class="eyebrow">Meet a species</p><h3>Find the highlighted bubble</h3><p>It will come to rest. Select it to open the record; the other bubbles move away from the pointer.</p>':'<p class="eyebrow">随机认识一个物种</p><h3>找到那颗换了颜色的物种球。</h3><p>它跃出后会停在原地，点击它查看物种档案。其它球会给鼠标让路。</p>';return;}
   const matchCount=n.speciesIds.filter(id=>matched.has(id)).length;
-  $('#selection-copy').innerHTML=en?englishSelection(n,species,matchCount):`<p class="eyebrow">${escape(rankLabels[n.depth]||'全库')} / ${species?(species.recordKind==='observation'?'原有观察档案':'新增素材档案'):'分类节点'}</p><h3>${escape(n.chinese)}</h3><p class="scientific">${escape(species?.scientificName||n.scientific)}</p><p>收录 ${n.count} 个档案${state.query||state.kind!=='all'?` · 当前搜索匹配 ${matchCount} 种`:''}。${species&&species.recordKind==='reference'?'仅有分类记录，尚无观察文稿、视频或影像。':''}</p><div class="taxonomy-path">${lineage(n).filter(p=>p.depth>=0).map(p=>`<span>${rankLabels[p.depth]} · ${escape(p.chinese)} <i>${escape(p.scientific)}</i></span>`).join('')}</div>${species?`<p><a href="${archiveURL(species.id)}" target="_blank" rel="noopener noreferrer">查看观察档案 ↗</a></p>`:''}${species?.originalVideoTitles?.length?`<div class="original-video-titles"><p>原视频标题</p><ul>${species.originalVideoTitles.map(title=>`<li>${escape(title)}</li>`).join('')}</ul></div>`:''}${species?`<p>分类来源：<a href="${escape(species.source.url)}" target="_blank" rel="noopener noreferrer">${escape(species.source.provider)} ↗</a> · 核对 ${escape(species.source.checked)}</p>${species.chineseNameSources?.length?`<p>中文属名${species.chineseNameSources[0].status==='verified'?'参考':'待核对'}：<a href="${escape(species.chineseNameSources[0].url)}" target="_blank" rel="noopener noreferrer">植物智（iPlant） ↗</a>；科学分类仍采用 POWO / WCVP。</p>`:''}${species.evidence?.higherClassificationURL?`<p>上级分类：<a href="${escape(species.evidence.higherClassificationURL)}" target="_blank" rel="noopener noreferrer">POWO记录 ↗</a> · WCVP快照 ${escape(species.evidence.datasetRelease?.replace(' (official directory last-modified)',''))}</p>`:''}`:'<p>点击末端物种，可查看它对应的分类记录来源。中文名称为辅助对照。</p>'}`;
+  $('#selection-copy').innerHTML=en?englishSelection(n,species,matchCount):`<p class="eyebrow">${escape(displayRank(n))} / ${species?(species.recordKind==='observation'?'原有观察档案':'新增素材档案'):'分类节点'}</p><h3>${escape(n.chinese)}</h3><p class="scientific">${escape(species?.scientificName||n.scientific)}</p><p>收录 ${n.count} 个档案${state.query||state.kind!=='all'?` · 当前搜索匹配 ${matchCount} 种`:''}。${species&&species.recordKind==='reference'?'仅有分类记录，尚无观察文稿、视频或影像。':''}</p><div class="taxonomy-path">${lineage(n).filter(p=>p.depth>=0).map(p=>`<span>${displayRank(p)} · ${escape(p.chinese)} <i>${escape(p.scientific)}</i></span>`).join('')}</div>${species?`<p><a href="${archiveURL(species.id)}" target="_blank" rel="noopener noreferrer">查看观察档案 ↗</a></p>`:''}${species?.originalVideoTitles?.length?`<div class="original-video-titles"><p>原视频标题</p><ul>${species.originalVideoTitles.map(title=>`<li>${escape(title)}</li>`).join('')}</ul></div>`:''}${species?`<p>分类来源：<a href="${escape(species.source.url)}" target="_blank" rel="noopener noreferrer">${escape(species.source.provider)} ↗</a> · 核对 ${escape(species.source.checked)}</p>${species.chineseNameSources?.length?`<p>中文属名${species.chineseNameSources[0].status==='verified'?'参考':'待核对'}：<a href="${escape(species.chineseNameSources[0].url)}" target="_blank" rel="noopener noreferrer">植物智（iPlant） ↗</a>；科学分类仍采用 POWO / WCVP。</p>`:''}${species.evidence?.higherClassificationURL?`<p>上级分类：<a href="${escape(species.evidence.higherClassificationURL)}" target="_blank" rel="noopener noreferrer">POWO记录 ↗</a> · WCVP快照 ${escape(species.evidence.datasetRelease?.replace(' (official directory last-modified)',''))}</p>`:''}`:'<p>点击末端物种，可查看它对应的分类记录来源。中文名称为辅助对照。</p>'}`;
   $('#focus').disabled=n.id===state.scope;$('#toggle-branch').hidden=!['tree','radial'].includes(state.view)||!n.children.length;
   $('#toggle-branch').textContent=state.collapsed.has(n.id)||state.depth<=n.depth?t('展开下一层'):t('收起此分支');
  }
