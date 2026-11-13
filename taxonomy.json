@@ -21204,8 +21204,10 @@
       },
       "taxonomyNote": "本期观察池中多种睡莲，文稿记为睡莲属。花色不同的植株未逐一鉴定到种。",
       "videoPublishedDate": "2026-11-13",
-      "videoPublishedTime": "20:00:00",
-      "originalVideoTitles": [],
+      "videoPublishedTime": "11:54:36",
+      "originalVideoTitles": [
+        "睡莲的花，好像一轮太阳。睡莲真的会睡觉么？什么是雌蕊先熟？睡莲和荷花有什么区别？这次，一起近距离观察这些美丽又有趣的水生植物。"
+      ],
       "videoOtherVarieties": "红色闪耀睡莲 Nymphaea 'Red Flare'；荷花 Nelumbo nucifera",
       "relatedPlants": [
         {
@@ -21232,9 +21234,9 @@
       ],
       "acceptedTaxonRank": "genus",
       "additionalRanks": [],
-      "videoPublicationStatus": "planned",
+      "videoPublicationStatus": "published",
       "videoPublishedTimezone": "Asia/Shanghai",
-      "video": "https://space.bilibili.com/1712828715"
+      "video": "https://www.bilibili.com/video/BV17QWv6ZEmF/"
     },
     {
       "id": "adiantum-flabellulatum",

@@ -32,9 +32,14 @@ function videoAccess(record, language = 'zh') {
 }
 
 function publicationNote(record, language = 'zh') {
-  if (record.videoPublicationStatus !== 'planned') return '';
-  const time = String(record.videoPublishedTime || '').slice(0, 5);
-  const label = language === 'en' ? 'Planned release' : '预设发布时间';
+  const status = record.videoPublicationStatus;
+  if (status !== 'planned' && status !== 'published') return '';
+  const time = status === 'planned'
+    ? String(record.videoPublishedTime || '').slice(0, 5)
+    : String(record.videoPublishedTime || '');
+  const label = language === 'en'
+    ? (status === 'planned' ? 'Planned release' : 'Published')
+    : (status === 'planned' ? '预设发布时间' : '视频发布时间');
   const zone = language === 'en' ? 'Beijing time' : '北京时间';
   return `<p class="publication-note">${label} · ${esc(record.videoPublishedDate)} ${esc(time)}（${zone}）</p>`;
 }
