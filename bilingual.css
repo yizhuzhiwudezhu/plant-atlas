@@ -62,11 +62,20 @@ html[lang="en"] .topbar .brand{letter-spacing:0}
 .record-activity { margin: 8px 0 18px; }
 .record-activity a {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: .55em;
   color: var(--green);
+  text-decoration: none;
+}
+.record-activity a>span:first-of-type {
   text-decoration: underline;
   text-underline-offset: .24em;
+}
+.record-activity img {
+  width: 36px;
+  height: 36px;
+  flex: none;
+  object-fit: contain;
 }
 .detail-heading .publication-note {
   color: var(--muted);

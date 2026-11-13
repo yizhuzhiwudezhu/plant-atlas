@@ -41,8 +41,8 @@ function publicationNote(record, language = 'zh') {
 
 function activityLink(record, language) {
   if (record.interactiveActivity !== 'waterlily') return '';
-  const label = language === 'en' ? 'Play the water lily pollination game' : '玩睡莲授粉小游戏';
-  return `<p class="record-activity"><a href="waterlily/index.html?lang=${language}#game">${label} <span aria-hidden="true">→</span></a></p>`;
+  const label = language === 'en' ? 'How it works and the game' : '机制讲解和小游戏';
+  return `<p class="record-activity"><a href="waterlily/index.html?lang=${language}"><img src="waterlily/assets/lily-icon.png" width="36" height="36" alt=""><span>${label}</span><span aria-hidden="true">→</span></a></p>`;
 }
 
 function horticulturalLabel(p){
