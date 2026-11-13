@@ -21203,8 +21203,8 @@
         "sourceDataChecked": "2026-06-04"
       },
       "taxonomyNote": "本期观察池中多种睡莲，文稿记为睡莲属。花色不同的植株未逐一鉴定到种。",
-      "videoPublishedDate": "",
-      "videoPublishedTime": "",
+      "videoPublishedDate": "2026-11-13",
+      "videoPublishedTime": "20:00:00",
       "originalVideoTitles": [],
       "videoOtherVarieties": "红色闪耀睡莲 Nymphaea 'Red Flare'；荷花 Nelumbo nucifera",
       "relatedPlants": [
@@ -21232,7 +21232,9 @@
       ],
       "acceptedTaxonRank": "genus",
       "additionalRanks": [],
-      "video": ""
+      "videoPublicationStatus": "planned",
+      "videoPublishedTimezone": "Asia/Shanghai",
+      "video": "https://space.bilibili.com/1712828715"
     },
     {
       "id": "adiantum-flabellulatum",
@@ -21320,8 +21322,8 @@
         "sourceDataChecked": "2026-06-04"
       },
       "taxonomyNote": "",
-      "videoPublishedDate": "",
-      "videoPublishedTime": "",
+      "videoPublishedDate": "2026-11-18",
+      "videoPublishedTime": "20:00:00",
       "originalVideoTitles": [],
       "videoOtherVarieties": "",
       "relatedPlants": [],
@@ -21338,7 +21340,9 @@
       ],
       "acceptedTaxonRank": "species",
       "additionalRanks": [],
-      "video": ""
+      "videoPublicationStatus": "planned",
+      "videoPublishedTimezone": "Asia/Shanghai",
+      "video": "https://space.bilibili.com/1712828715"
     }
   ]
 }

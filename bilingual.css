@@ -68,3 +68,9 @@ html[lang="en"] .topbar .brand{letter-spacing:0}
   text-decoration: underline;
   text-underline-offset: .24em;
 }
+.detail-heading .publication-note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 8px 0 14px;
+}

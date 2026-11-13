@@ -75,6 +75,7 @@
     if (!a) return;
     const p = plant(a.dataset.videoArchive);
     if (!p || a.getAttribute('href') !== p.video) return;
+    if (/^https:\/\/space\.bilibili\.com\//.test(p.video)) return;
     send('视频点击',p.name,{档案编号:p.id,物种名称:p.name,按钮位置:a.dataset.videoPosition || '详情页'});
   });
   window.addEventListener('message',event => {

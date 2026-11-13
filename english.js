@@ -103,7 +103,7 @@ window.FieldLanguages = (() => {
         ${record?`<a class="companion-archive" href="#plant/${esc(record.id)}">Read the species record ↗</a>`:''}
         ${note}${status}${source}</article>`;
     });
-    return `<section id="companions" class="detail-section companion-section"><p class="eyebrow">${p.video ? 'IN THIS VIDEO' : 'IN THIS OBSERVATION'}</p>
+    return `<section id="companions" class="detail-section companion-section"><p class="eyebrow">${p.video && !isBilibiliProfile(p) ? 'IN THIS VIDEO' : 'IN THIS OBSERVATION'}</p>
       <h2>Also in this observation</h2><p>${esc(t(p.companionIntro||p.videoOtherVarieties,p.companionIntro?'companionIntro':'videoOtherVarieties'))}</p>
       ${cards.length?`<div class="companion-list">${cards.join('')}</div>`:''}</section>`;
   }
@@ -133,7 +133,7 @@ window.FieldLanguages = (() => {
       ${horticulture?`<p>Horticultural name: ${esc(p.horticulturalName||p.scientificName)} · ${anchor(horticulture.url,'Name source')}${horticulture.scope?' · '+esc(t(horticulture.scope,'horticulturalSource.scope')):''}</p>`:''}
       ${refs.length?`<h3>References</h3><ol class="references">${refs.map((r,i)=>`<li>${anchor(r.url,t(r.title,'references.'+i+'.title'))}${r.author||r.year?`<span>${[r.author,r.year].filter(Boolean).map(esc).join(' · ')}</span>`:''}${t(r.title,'references.'+i+'.title')!==r.title?`<details><summary>Original title</summary><span lang="zh-CN">${esc(r.title)}</span></details>`:''}</li>`).join('')}</ol>`:''}
       <h3>Images and field notes</h3><p>${esc(full?t(p.sourceText,'sourceText'):'The materials were compiled from the video and the author’s manuscript.')}
-      ${p.video ? anchor(p.video,'Watch the video (Chinese)',`data-video-archive="${esc(p.id)}" data-video-position="资料来源"`) : ''}</p></section>`;
+      ${p.video ? anchor(p.video,isBilibiliProfile(p)?'Bilibili profile':'Watch the video (Chinese)',`data-video-archive="${esc(p.id)}" data-video-position="资料来源"`) : ''}</p></section>`;
   }
   function detail(main,p) {
     if(!p){document.title='Record not found';main.innerHTML='<div class="empty"><h1>Record not found</h1><a href="#">Return to the index</a></div>';return;}
@@ -146,19 +146,19 @@ window.FieldLanguages = (() => {
     const drawings=full?p.drawings:[];
     const sections=[['notes','Field notes',full?p.chapters.length:null],...(photos.length?[['photos','Photographs',photos.length]]:[]),
       ...(drawings.length?[['drawings','Drawings',drawings.length]]:[]),['taxonomy','Taxonomy',null],
-      ...(full&&(p.relatedPlants?.length||p.videoOtherVarieties)?[['companions',p.video ? 'Also in this video' : 'Also in this observation',null]]:[]),['sources','Sources',null]];
-    const videoLinkAttrs=`data-video-archive="${esc(p.id)}" data-video-position="页头按钮"`;
+      ...(full&&(p.relatedPlants?.length||p.videoOtherVarieties)?[['companions',p.video && !isBilibiliProfile(p) ? 'Also in this video' : 'Also in this observation',null]]:[]),['sources','Sources',null]];
     const chineseURL=languageURL('zh');chineseURL.hash='plant/'+encodeURIComponent(p.id)+'/notes';
     document.title=title+' · 一株植物的株';
     main.innerHTML=`<div class="detail en-detail"><a class="back" href="#">← Species index</a>
       <p class="breadcrumb">${(p.ranks||[]).map(r=>r.scientific).filter(Boolean).map(esc).join(' › ')}</p>
       <section class="detail-hero"><div class="detail-cover">${p.cover?photoButton(p.cover,full?t(p.coverCaption,'coverCaption')||title:title):''}</div><div class="detail-heading">
       <div class="heading-top"><div><p class="eyebrow">${genusRecord ? 'GENUS RECORD' : 'SPECIES RECORD'} · ${esc(p.id)}</p><h1>${esc(title)}</h1></div>
-      ${p.video?`<div class="video-access"><a class="video-qr" data-video-archive="${esc(p.id)}" data-video-position="二维码链接" href="${esc(p.video)}" target="_blank" rel="noopener noreferrer"><img src="assets/${esc(p.id)}/video-qr.png" alt="QR code for the video"></a><a class="video-link" ${videoLinkAttrs} href="${esc(p.video)}" target="_blank" rel="noopener noreferrer">▷ Watch video ↗</a></div>`:''}</div>
+      ${videoAccess(p, 'en')}</div>
       <p class="en-original-name" lang="zh-CN">${esc(p.name)}</p>
       <p class="class-group">${esc(groups[p.group]||p.group)}</p>${full?`<p class="detail-summary">${esc(t(p.summary,'summary'))}</p>`:''}
       ${activityLink(p, 'en')}
-      <dl>${[['Order',p.orderLatin],['Family',p.familyLatin],['Genus',p.genusLatin],['Video date',p.videoPublishedDate]].filter(x=>x[1]).map(([a,b])=>`<div><dt>${a}</dt><dd>${esc(b)}</dd></div>`).join('')}
+      ${publicationNote(p, 'en')}
+      <dl>${[['Order',p.orderLatin],['Family',p.familyLatin],['Genus',p.genusLatin],[p.videoPublicationStatus==='planned'?'Planned video date':'Video date',p.videoPublishedDate]].filter(x=>x[1]).map(([a,b])=>`<div><dt>${a}</dt><dd>${esc(b)}</dd></div>`).join('')}
       ${full&&p.aliases?.some(a=>a!==p.name&&a!==p.speciesLatin&&a!==p.scientificName)?`<div><dt>Other names in the source</dt><dd>${p.aliases.filter(a=>a!==p.name&&a!==p.speciesLatin&&a!==p.scientificName).map(a=>esc(featured.has(p.id)?t(a):a)).join(', ')}</dd></div>`:''}</dl></div></section>
       <nav class="detail-nav" aria-label="Record sections">${sections.map(([id,label,n])=>`<a href="#plant/${esc(p.id)}/${id}">${label}${n!==null?` <small>${n}</small>`:''}</a>`).join('')}</nav>
       <div class="detail-columns"><div><section id="notes" class="detail-section"><p class="eyebrow">FIELD NOTES</p><h2>${full ? (genusRecord ? 'Meet this genus' : 'Meet this species') : 'Read the original observation'}</h2>

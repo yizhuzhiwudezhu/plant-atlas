@@ -116,7 +116,7 @@
       return `<a class="plant-card" href="${href(p)}"><div class="card-image"><img src="${escape(p.cover)}" alt="${escape(p.scientificName || p.name)}" loading="lazy">
         ${groups[p.group] ? `<span class="image-label">${hit(groups[p.group])}</span>` : ''}
         ${p.drawings?.length ? '<span class="drawing-label">Sketches</span>' : ''}</div>
-        <div class="card-body">${companions.map(o=>`<small class="companion-hit">Also featured in this video: ${[...new Set([o.english,o.scientific,o.name].filter(Boolean))].map(hit).join(' · ')}</small>`).join('')}
+        <div class="card-body">${companions.map(o=>`<small class="companion-hit">${p.video&&!isBilibiliProfile(p)?'Also featured in this video':'Also in this observation'}: ${[...new Set([o.english,o.scientific,o.name].filter(Boolean))].map(hit).join(' · ')}</small>`).join('')}
         <p class="card-family">${hit(classification)}</p><h3>${hit(title)}<span aria-hidden="true">↗</span></h3>
           <p class="en-original-name" lang="zh-CN">${hit(p.name)}</p>
           ${summary && summary !== p.summary ? `<p class="card-description">${hit(summary)}</p>` : ''}

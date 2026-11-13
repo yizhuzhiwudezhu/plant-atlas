@@ -120,7 +120,7 @@
           const values=distinct([o.name,o.scientific]);
           if (!o.name || !terms.some(term=>joined([...values,o.english]).includes(term))) continue;
           if (o.english && o.english!==o.name) values.push(o.english);
-          hints.push((p.video?'Also featured in this video: ':'Also in these field notes: ')+values.map(v=>marked(v,terms)).join(' · '));
+          hints.push((p.video&&!/^https:\/\/space\.bilibili\.com\//.test(p.video)?'Also featured in this video: ':'Also in these field notes: ')+values.map(v=>marked(v,terms)).join(' · '));
         }
         const aliases=r.names.filter(n=>n!==p.name && n!==p.scientificName && terms.some(term=>normalize(n).includes(term)));
         if (aliases.length) hints.push('Matching name: '+distinct(aliases).map(n=>marked(n,terms)).join(' · '));
